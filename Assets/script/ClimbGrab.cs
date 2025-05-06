@@ -67,6 +67,7 @@ public class ClimbGrab : MonoBehaviour
 
     void Climb()
     {
+        // 슬로우모션 중엔 시간이 느리게 흐르게 (= 슬로우모션 시간만큼 오래 Climb 가능)
         climbTimer += Time.deltaTime;
 
         Vector3 moveDirection = (targetPosition - transform.position);
@@ -74,6 +75,7 @@ public class ClimbGrab : MonoBehaviour
 
         if (distanceToTarget > 0.05f && climbTimer < climbTimeout)
         {
+            // 슬로우모션이면 느리게 이동, 시간도 느리게 흐르므로 거리 일관성 유지
             controller.Move(moveDirection.normalized * climbSpeed * Time.deltaTime);
         }
         else
