@@ -23,7 +23,7 @@ public class PlayerMovement : MonoBehaviour
     private Vector3 velocity;
     private float turnSmoothTime = 0.1f;
     private float turnSmoothVelocity;
-    private Vector3 currentMoveVelocity = Vector3.zero;
+    private Vector3 targetMove;
 
     [Space(10)]
     [Header("상태 이상")]
@@ -57,7 +57,6 @@ public class PlayerMovement : MonoBehaviour
             direction.z = -vertical;
         }
 
-        Vector3 targetMove = Vector3.zero;
 
         if (direction.magnitude >= 0.1f)
         {
@@ -70,6 +69,13 @@ public class PlayerMovement : MonoBehaviour
 
             if (currentState == State.Slow)
                 targetMove *= slowAmount;
+        }
+        else
+        {
+            if (currentState == State.Ice)
+                targetMove = Vector3.Lerp(targetMove,Vector3.zero,Time.deltaTime / iceFriction);
+            else
+                targetMove = Vector3.zero;
         }
 
         // Jump
@@ -89,6 +95,11 @@ public class PlayerMovement : MonoBehaviour
         Vector3 finalMove = targetMove * Time.deltaTime;
         finalMove.y = velocity.y * Time.deltaTime;
         controller.Move(finalMove);
+    }
+
+    private void Slip()
+    {
+
     }
 
     // 상태 이상
