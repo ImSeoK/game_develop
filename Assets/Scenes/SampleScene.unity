@@ -38,6 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -306,7 +307,9 @@ MonoBehaviour:
   moveSpeed: 5
   gravity: -20
   jumpHeight: 2
+  slowAmount: 0.3
   cameraTransform: {fileID: 963194228}
+  currentState: 0
 --- !u!143 &638043698
 CharacterController:
   m_ObjectHideFlags: 0
@@ -332,7 +335,7 @@ CharacterController:
   m_StepOffset: 0.3
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
-  m_Center: {x: 0, y: 0.2, z: 0}
+  m_Center: {x: 0, y: 0.25, z: 0}
 --- !u!4 &638043699 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2195934572423075969, guid: e047d760e15724f49aca7e5fe42a70d8, type: 3}

@@ -1,19 +1,35 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 [RequireComponent(typeof(CharacterController))]
 public class PlayerMovement : MonoBehaviour
 {
+    public enum State
+    {
+        Normal, // 기본
+        Slow,   // 슬로우
+        Revert, // 방향키 반전
+        Ice     // 빙판
+    }
+
     public float moveSpeed;
     public float gravity;
-    public float jumpHeight; 
+    public float jumpHeight;
     public Transform cameraTransform;
 
     private CharacterController controller;
     private Vector3 velocity;
     private float turnSmoothTime = 0.1f;
     private float turnSmoothVelocity;
+    private Vector3 currentMoveVelocity = Vector3.zero;
+
+    [Space(10)]
+    [Header("상태 이상")]
+    public State currentState = State.Normal;
+    public float slowAmount = 0.3f;
+    public float iceFriction = 0.05f;
 
     void Start()
     {
@@ -32,9 +48,16 @@ public class PlayerMovement : MonoBehaviour
     {
         float horizontal = Input.GetAxisRaw("Horizontal");
         float vertical = Input.GetAxisRaw("Vertical");
+
         Vector3 direction = new Vector3(horizontal, 0f, vertical).normalized;
 
-        Vector3 move = Vector3.zero;
+        if (currentState == State.Revert)
+        {
+            direction.x = -horizontal;
+            direction.z = -vertical;
+        }
+
+        Vector3 targetMove = Vector3.zero;
 
         if (direction.magnitude >= 0.1f)
         {
@@ -43,7 +66,10 @@ public class PlayerMovement : MonoBehaviour
             transform.rotation = Quaternion.Euler(0f, angle, 0f);
 
             Vector3 moveDir = Quaternion.Euler(0f, targetAngle, 0f) * Vector3.forward;
-            move = moveDir.normalized * moveSpeed;
+            targetMove = moveDir.normalized * moveSpeed;
+
+            if (currentState == State.Slow)
+                targetMove *= slowAmount;
         }
 
         // Jump
@@ -60,8 +86,29 @@ public class PlayerMovement : MonoBehaviour
         velocity.y += gravity * Time.deltaTime;
 
         // 최종 이동 벡터 = 이동 + 중력
-        Vector3 finalMove = move * Time.deltaTime;
+        Vector3 finalMove = targetMove * Time.deltaTime;
         finalMove.y = velocity.y * Time.deltaTime;
         controller.Move(finalMove);
+    }
+
+    // 상태 이상
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.tag == "Floor_Slow")
+        {
+            currentState = State.Slow;
+        }
+        else if (collision.gameObject.tag == "Floor_Revert")
+        {
+            currentState = State.Revert;
+        }
+        else if (collision.gameObject.tag == "Floor_Ice")
+        {
+            currentState = State.Ice;
+        }
+        else if (collision.gameObject.tag == "Floor_Default")
+        {
+            currentState = State.Normal;
+        }
     }
 }
