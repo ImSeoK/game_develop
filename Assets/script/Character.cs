@@ -107,22 +107,22 @@ public class PlayerMovement : MonoBehaviour
     {
         if (hit.gameObject.tag == "Floor_Slow")
         {
-            Debug.Log("State : Slow");
+            // Debug.Log("State : Slow");
             currentState = State.Slow;
         }
         else if (hit.gameObject.tag == "Floor_Revert")
         {
-            Debug.Log("State : Revert");
+            // Debug.Log("State : Revert");
             currentState = State.Revert;
         }
         else if (hit.gameObject.tag == "Floor_Ice")
         {
-            Debug.Log("State : Ice");
+            // Debug.Log("State : Ice");
             currentState = State.Ice;
         }
         else if (hit.gameObject.tag == "Floor_Normal")
         {
-            Debug.Log("State : Normal");
+            // Debug.Log("State : Normal");
             currentState = State.Normal;
         }
     }
