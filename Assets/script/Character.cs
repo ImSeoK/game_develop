@@ -103,22 +103,26 @@ public class PlayerMovement : MonoBehaviour
     }
 
     // 상태 이상
-    private void OnCollisionEnter(Collision collision)
+    private void OnControllerColliderHit(ControllerColliderHit hit)
     {
-        if (collision.gameObject.tag == "Floor_Slow")
+        if (hit.gameObject.tag == "Floor_Slow")
         {
+            Debug.Log("State : Slow");
             currentState = State.Slow;
         }
-        else if (collision.gameObject.tag == "Floor_Revert")
+        else if (hit.gameObject.tag == "Floor_Revert")
         {
+            Debug.Log("State : Revert");
             currentState = State.Revert;
         }
-        else if (collision.gameObject.tag == "Floor_Ice")
+        else if (hit.gameObject.tag == "Floor_Ice")
         {
+            Debug.Log("State : Ice");
             currentState = State.Ice;
         }
-        else if (collision.gameObject.tag == "Floor_Default")
+        else if (hit.gameObject.tag == "Floor_Normal")
         {
+            Debug.Log("State : Normal");
             currentState = State.Normal;
         }
     }

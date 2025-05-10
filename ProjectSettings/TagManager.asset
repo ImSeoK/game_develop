@@ -3,7 +3,11 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Floor_Normal
+  - Floor_Ice
+  - Floor_Revert
+  - Floor_Slow
   layers:
   - Default
   - TransparentFX
