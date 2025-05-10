@@ -74,3 +74,4 @@ Etc
 **/packages-lock.json
 **/ProjectSettings.asset
 **/ProjectVersion.txt
+ProjectSettings/Packages/com.unity.testtools.codecoverage/Settings.json
