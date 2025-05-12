@@ -8,6 +8,7 @@ TagManager:
   - Floor_Ice
   - Floor_Revert
   - Floor_Slow
+  - Floor_Fast
   layers:
   - Default
   - TransparentFX

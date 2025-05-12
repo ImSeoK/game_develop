@@ -11,7 +11,8 @@ public class PlayerMovement : MonoBehaviour
         Normal, // 기본
         Slow,   // 슬로우
         Revert, // 방향키 반전
-        Ice     // 빙판
+        Ice,     // 빙판
+        Fast    // 패스트트
     }
 
     public float moveSpeed;
@@ -29,6 +30,7 @@ public class PlayerMovement : MonoBehaviour
     [Header("상태 이상")]
     public State currentState = State.Normal;
     public float slowAmount = 0.3f;
+    public float fastAmount = 1.8f;
     public float iceFriction = 0.05f;
 
     void Start()
@@ -69,6 +71,8 @@ public class PlayerMovement : MonoBehaviour
 
             if (currentState == State.Slow)
                 targetMove *= slowAmount;
+            else if (currentState == State.Fast)
+                targetMove *= fastAmount;
         }
         else
         {
@@ -124,6 +128,11 @@ public class PlayerMovement : MonoBehaviour
         {
             // Debug.Log("State : Normal");
             currentState = State.Normal;
+        }
+        else if (hit.gameObject.tag == "Floor_Fast")
+        {
+            // Debug.Log("State : Normal");
+            currentState = State.Fast;
         }
     }
 }
