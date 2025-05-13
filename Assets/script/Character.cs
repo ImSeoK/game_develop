@@ -1,10 +1,10 @@
-using System.Collections;
+ï»¿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-
 [RequireComponent(typeof(CharacterController))]
+[RequireComponent(typeof(AudioSource))] // AudioSource í•„ìˆ˜
 public class PlayerMovement : MonoBehaviour
 {
     public enum State
@@ -20,27 +20,42 @@ public class PlayerMovement : MonoBehaviour
     public float gravity = -9.81f;
     public float jumpHeight = 2f;
     public Transform cameraTransform;
+    public LayerMask groundLayers;
 
     private CharacterController controller;
     private Vector3 velocity;
     private float turnSmoothTime = 0.1f;
     private float turnSmoothVelocity;
     private Vector3 targetMove;
+    private Animator animator;
 
-    [Header("»óÅÂ ÀÌ»ó")]
+    [Header("ìƒíƒœ ì´ìƒ")]
     public State currentState = State.Normal;
     public float slowAmount = 0.3f;
     public float fastAmount = 1.8f;
     public float iceFriction = 0.05f;
 
+    [Header("ì‚¬ìš´ë“œ")]
+    public AudioClip runSound;
+    public AudioClip slowRunSound;
+    public AudioClip jumpSound;
+    private AudioSource audioSource;
+    private float footstepTimer = 0f;
+    public float footstepInterval = 0.4f;
+
+    bool IsGrounded()
+    {
+        LayerMask groundLayers = LayerMask.GetMask("Grabbable");
+        return Physics.Raycast(transform.position, Vector3.down, 0.2f, groundLayers);
+    }
+
     void Start()
     {
         controller = GetComponent<CharacterController>();
+        animator = GetComponent<Animator>();
+        audioSource = GetComponent<AudioSource>();
 
-        // Gravity°¡ Ç×»ó À½¼ö·Î º¸ÀåµÇµµ·Ï
         gravity = Mathf.Abs(gravity) * -1f;
-
-        // ÃÊ±â ³«ÇÏ ¼Óµµ ¾ÈÀüÇÏ°Ô ¼³Á¤
         velocity = Vector3.zero;
     }
 
@@ -56,11 +71,12 @@ public class PlayerMovement : MonoBehaviour
         Vector3 direction = new Vector3(horizontal, 0f, vertical).normalized;
 
         if (currentState == State.Revert)
-        {
             direction = -direction;
-        }
 
-        if (direction.magnitude >= 0.1f)
+        bool isMoving = direction.magnitude >= 0.1f;
+        animator.SetBool("isRunning", isMoving);
+
+        if (isMoving)
         {
             float targetAngle = Mathf.Atan2(direction.x, direction.z) * Mathf.Rad2Deg + cameraTransform.eulerAngles.y;
             float angle = Mathf.SmoothDampAngle(transform.eulerAngles.y, targetAngle, ref turnSmoothVelocity, turnSmoothTime);
@@ -73,27 +89,62 @@ public class PlayerMovement : MonoBehaviour
                 targetMove *= slowAmount;
             else if (currentState == State.Fast)
                 targetMove *= fastAmount;
+
+            // âœ… ë°œì†Œë¦¬ ì¬ìƒ ì²˜ë¦¬
+            if (IsGrounded())
+            {
+                footstepTimer -= Time.deltaTime;
+                if (footstepTimer <= 0f)
+                {
+                    // âœ… í˜„ì¬ íƒ€ì„ìŠ¤ì¼€ì¼ ê¸°ì¤€ìœ¼ë¡œ ì‚¬ìš´ë“œ ì„ íƒ
+                    AudioClip selectedClip = (Time.timeScale < 1f && slowRunSound != null) ? slowRunSound : runSound;
+
+                    if (selectedClip != null)
+                    {
+                        audioSource.PlayOneShot(selectedClip);
+                    }
+
+                    footstepTimer = footstepInterval;
+                }
+            }
         }
         else
         {
+            footstepTimer = 0f;
+
             if (currentState == State.Ice)
                 targetMove = Vector3.Lerp(targetMove, Vector3.zero, Time.deltaTime / iceFriction);
             else
                 targetMove = Vector3.zero;
         }
 
-        // Á¡ÇÁ ¹× Áß·Â Ã³¸®
-        if (controller.isGrounded)
+        // ì í”„ ë° ì¤‘ë ¥ ì²˜ë¦¬
+        if (IsGrounded())
         {
-            if (velocity.y < 0)
-                velocity.y = -2f;
+            if (animator.GetBool("isJumping"))
+            {
+                animator.SetBool("isJumping", false);
+            }
 
-            if (Input.GetButtonDown("Jump"))
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
                 velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
+                animator.SetBool("isJumping", true);
+
+                // âœ… ì í”„ ì‚¬ìš´ë“œ ì¬ìƒ
+                if (jumpSound != null)
+                {
+                    audioSource.PlayOneShot(jumpSound);
+                }
+            }
+
+            if (velocity.y < 0)
+            {
+                velocity.y = -2f;
+            }
         }
         else
         {
-            // ³«ÇÏ ¼Óµµ Á¦ÇÑ (¾ÈÀü ÀåÄ¡)
             if (velocity.y < -50f)
                 velocity.y = -50f;
         }

@@ -1,4 +1,4 @@
-using UnityEngine;
+ï»¿using UnityEngine;
 using UnityEngine.EventSystems;
 
 public class ClimbGrab : MonoBehaviour
@@ -15,10 +15,12 @@ public class ClimbGrab : MonoBehaviour
     private float cooldownTimer = 0f;
     private CharacterController controller;
     private Vector3 targetPosition;
+    private Animator animator;
 
     void Start()
     {
         controller = GetComponent<CharacterController>();
+        animator = GetComponent<Animator>(); // Animator ê°€ì ¸ì˜¤ê¸°
     }
 
     void Update()
@@ -62,12 +64,17 @@ public class ClimbGrab : MonoBehaviour
             {
                 move.enabled = false;
             }
+
+            // ğŸ”½ í´ë¼ì´ë° ì• ë‹ˆë©”ì´ì…˜ ì¬ìƒ
+            if (animator)
+            {
+                animator.SetTrigger("Climbing");
+            }
         }
     }
 
     void Climb()
     {
-        // ½½·Î¿ì¸ğ¼Ç Áß¿£ ½Ã°£ÀÌ ´À¸®°Ô Èå¸£°Ô (= ½½·Î¿ì¸ğ¼Ç ½Ã°£¸¸Å­ ¿À·¡ Climb °¡´É)
         climbTimer += Time.deltaTime;
 
         Vector3 moveDirection = (targetPosition - transform.position);
@@ -75,7 +82,6 @@ public class ClimbGrab : MonoBehaviour
 
         if (distanceToTarget > 0.05f && climbTimer < climbTimeout)
         {
-            // ½½·Î¿ì¸ğ¼ÇÀÌ¸é ´À¸®°Ô ÀÌµ¿, ½Ã°£µµ ´À¸®°Ô Èå¸£¹Ç·Î °Å¸® ÀÏ°ü¼º À¯Áö
             controller.Move(moveDirection.normalized * climbSpeed * Time.deltaTime);
         }
         else
@@ -93,6 +99,12 @@ public class ClimbGrab : MonoBehaviour
         if (TryGetComponent<PlayerMovement>(out var move))
         {
             move.enabled = true;
+        }
+
+        // ğŸ”½ í´ë¼ì´ë° ì¢…ë£Œ ì‹œ Idle ìƒíƒœ ë“±ìœ¼ë¡œ ì „í™˜ë˜ë„ë¡ ë¹„ì›Œë‘ê±°ë‚˜ í•„ìš” ì‹œ ì „í™˜ ì• ë‹ˆë©”ì´ì…˜ ì„¤ì •
+        if (animator)
+        {
+            animator.Play("Idle"); // Idle ìƒíƒœê°€ ì—†ë‹¤ë©´ ì œê±° ê°€ëŠ¥
         }
     }
 }
