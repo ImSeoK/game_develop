@@ -7,6 +7,7 @@ public class SlowMotionToggle : MonoBehaviour
     public float slowTimeScale = 0.2f;
     public KeyCode slowKey = KeyCode.LeftShift;
     private float originalFixedDeltaTime;
+    [SerializeField] private PlayerMovement playerMovement;
 
     void Start()
     {
@@ -15,7 +16,7 @@ public class SlowMotionToggle : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKey(slowKey))
+        if (playerMovement.currentState != PlayerMovement.State.Fast && Input.GetKey(slowKey))
         {
             Time.timeScale = slowTimeScale;
             Time.fixedDeltaTime = originalFixedDeltaTime * Time.timeScale;
