@@ -3,21 +3,22 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
+
 [RequireComponent(typeof(CharacterController))]
 public class PlayerMovement : MonoBehaviour
 {
     public enum State
     {
-        Normal, // 기본
-        Slow,   // 슬로우
-        Revert, // 방향키 반전
-        Ice,     // 빙판
-        Fast    // 패스트트
+        Normal,
+        Slow,
+        Revert,
+        Ice,
+        Fast
     }
 
-    public float moveSpeed;
-    public float gravity;
-    public float jumpHeight;
+    public float moveSpeed = 5f;
+    public float gravity = -9.81f;
+    public float jumpHeight = 2f;
     public Transform cameraTransform;
 
     private CharacterController controller;
@@ -26,7 +27,6 @@ public class PlayerMovement : MonoBehaviour
     private float turnSmoothVelocity;
     private Vector3 targetMove;
 
-    [Space(10)]
     [Header("상태 이상")]
     public State currentState = State.Normal;
     public float slowAmount = 0.3f;
@@ -35,10 +35,13 @@ public class PlayerMovement : MonoBehaviour
 
     void Start()
     {
-        Screen.fullScreenMode = FullScreenMode.ExclusiveFullScreen; // 전체화면
-        Screen.fullScreen = true;
-
         controller = GetComponent<CharacterController>();
+
+        // Gravity가 항상 음수로 보장되도록
+        gravity = Mathf.Abs(gravity) * -1f;
+
+        // 초기 낙하 속도 안전하게 설정
+        velocity = Vector3.zero;
     }
 
     void Update()
@@ -50,15 +53,12 @@ public class PlayerMovement : MonoBehaviour
     {
         float horizontal = Input.GetAxisRaw("Horizontal");
         float vertical = Input.GetAxisRaw("Vertical");
-
         Vector3 direction = new Vector3(horizontal, 0f, vertical).normalized;
 
         if (currentState == State.Revert)
         {
-            direction.x = -horizontal;
-            direction.z = -vertical;
+            direction = -direction;
         }
-
 
         if (direction.magnitude >= 0.1f)
         {
@@ -67,7 +67,7 @@ public class PlayerMovement : MonoBehaviour
             transform.rotation = Quaternion.Euler(0f, angle, 0f);
 
             Vector3 moveDir = Quaternion.Euler(0f, targetAngle, 0f) * Vector3.forward;
-            targetMove = moveDir.normalized * moveSpeed;
+            targetMove = moveDir * moveSpeed;
 
             if (currentState == State.Slow)
                 targetMove *= slowAmount;
@@ -77,12 +77,12 @@ public class PlayerMovement : MonoBehaviour
         else
         {
             if (currentState == State.Ice)
-                targetMove = Vector3.Lerp(targetMove,Vector3.zero,Time.deltaTime / iceFriction);
+                targetMove = Vector3.Lerp(targetMove, Vector3.zero, Time.deltaTime / iceFriction);
             else
                 targetMove = Vector3.zero;
         }
 
-        // Jump
+        // 점프 및 중력 처리
         if (controller.isGrounded)
         {
             if (velocity.y < 0)
@@ -91,48 +91,39 @@ public class PlayerMovement : MonoBehaviour
             if (Input.GetButtonDown("Jump"))
                 velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
         }
+        else
+        {
+            // 낙하 속도 제한 (안전 장치)
+            if (velocity.y < -50f)
+                velocity.y = -50f;
+        }
 
-        // Gravity
         velocity.y += gravity * Time.deltaTime;
 
-        // 최종 이동 벡터 = 이동 + 중력
         Vector3 finalMove = targetMove * Time.deltaTime;
         finalMove.y = velocity.y * Time.deltaTime;
         controller.Move(finalMove);
     }
 
-    private void Slip()
-    {
-
-    }
-
-    // 상태 이상
     private void OnControllerColliderHit(ControllerColliderHit hit)
     {
-        if (hit.gameObject.tag == "Floor_Slow")
+        switch (hit.gameObject.tag)
         {
-            // Debug.Log("State : Slow");
-            currentState = State.Slow;
-        }
-        else if (hit.gameObject.tag == "Floor_Revert")
-        {
-            // Debug.Log("State : Revert");
-            currentState = State.Revert;
-        }
-        else if (hit.gameObject.tag == "Floor_Ice")
-        {
-            // Debug.Log("State : Ice");
-            currentState = State.Ice;
-        }
-        else if (hit.gameObject.tag == "Floor_Normal")
-        {
-            // Debug.Log("State : Normal");
-            currentState = State.Normal;
-        }
-        else if (hit.gameObject.tag == "Floor_Fast")
-        {
-            // Debug.Log("State : Normal");
-            currentState = State.Fast;
+            case "Floor_Slow":
+                currentState = State.Slow;
+                break;
+            case "Floor_Revert":
+                currentState = State.Revert;
+                break;
+            case "Floor_Ice":
+                currentState = State.Ice;
+                break;
+            case "Floor_Fast":
+                currentState = State.Fast;
+                break;
+            case "Floor_Normal":
+                currentState = State.Normal;
+                break;
         }
     }
 }
