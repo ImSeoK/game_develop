@@ -2925,6 +2925,7 @@ MonoBehaviour:
   groundLayers:
     serializedVersion: 2
     m_Bits: 64
+  flySpeedMultiplier: 2.5
   currentState: 0
   slowAmount: 0.3
   fastAmount: 1.8
@@ -5260,7 +5261,7 @@ Transform:
   m_GameObject: {fileID: 963194225}
   serializedVersion: 2
   m_LocalRotation: {x: 0.12963478, y: 0.6951222, z: -0.12963478, w: 0.6951222}
-  m_LocalPosition: {x: -6.293, y: 2.718, z: 10.52}
+  m_LocalPosition: {x: -6.488, y: 2.82, z: -3.598}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -7735,15 +7736,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c663f575bfd84fe4bb18fdbaae14f4ea, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -7.534
+      value: -5.243
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c663f575bfd84fe4bb18fdbaae14f4ea, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.377
+      value: 0.285
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c663f575bfd84fe4bb18fdbaae14f4ea, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -18.84
+      value: -18.297
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c663f575bfd84fe4bb18fdbaae14f4ea, type: 3}
       propertyPath: m_LocalRotation.w

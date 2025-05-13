@@ -13,7 +13,8 @@ public class PlayerMovement : MonoBehaviour
         Slow,
         Revert,
         Ice,
-        Fast
+        Fast,
+        Fly
     }
 
     public float moveSpeed = 5f;
@@ -28,6 +29,8 @@ public class PlayerMovement : MonoBehaviour
     private float turnSmoothVelocity;
     private Vector3 targetMove;
     private Animator animator;
+
+    public float flySpeedMultiplier = 2.5f;
 
     [Header("상태 이상")]
     public State currentState = State.Normal;
@@ -61,7 +64,61 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-        Move();
+        HandleModeToggle(); // 여기서 G 키 누르는지 계속 확인 중
+
+        if (currentState == State.Fly)
+            FlyMove();  // 비행 모드 이동 처리
+        else
+            Move();     // 일반 이동 처리
+    }
+
+    void HandleModeToggle()
+    {
+        if (Input.GetKeyDown(KeyCode.G))
+        {
+            if (currentState != State.Fly)
+                currentState = State.Fly;
+            else
+                currentState = State.Normal;
+        }
+    }
+
+    void FlyMove()
+    {
+        float horizontal = Input.GetAxisRaw("Horizontal");
+        float vertical = Input.GetAxisRaw("Vertical");
+
+        float upward = 0f;
+        if (Input.GetKey(KeyCode.Space)) upward = 1f;
+        if (Input.GetKey(KeyCode.LeftControl)) upward = -1f;
+
+        Vector3 direction = new Vector3(horizontal, 0f, vertical).normalized;
+        bool isMoving = direction.magnitude >= 0.1f || upward != 0f;
+
+        animator.SetBool("isRunning", isMoving);
+        animator.SetBool("isJumping", false);
+
+        Vector3 moveDir = Vector3.zero;
+
+        if (direction.magnitude >= 0.1f)
+        {
+            float targetAngle = Mathf.Atan2(direction.x, direction.z) * Mathf.Rad2Deg + cameraTransform.eulerAngles.y;
+            float angle = Mathf.SmoothDampAngle(transform.eulerAngles.y, targetAngle, ref turnSmoothVelocity, turnSmoothTime);
+            transform.rotation = Quaternion.Euler(0f, angle, 0f);
+
+            moveDir = Quaternion.Euler(0f, targetAngle, 0f) * Vector3.forward;
+        }
+
+        // 상승 및 하강 방향 포함
+        moveDir += Vector3.up * upward;
+
+        // 비행 속도 적용
+        float speed = moveSpeed * flySpeedMultiplier;
+
+        Vector3 finalMove = moveDir.normalized * speed * Time.deltaTime;
+
+        velocity.y = 0f; // 중력 제거
+        controller.Move(finalMove);
     }
 
     void Move()
