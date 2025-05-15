@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class ThirdPersonCamera : MonoBehaviour
 {
@@ -13,12 +14,22 @@ public class ThirdPersonCamera : MonoBehaviour
 
     void Start()
     {
-        Cursor.lockState = CursorLockMode.Locked; // 마우스를 화면 중앙에 고정
-        Cursor.visible = false;                  // 마우스 커서 숨김
+        if (GameManager.Instance.isGameStarted)
+        {
+            Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = false;
+        }
+        else
+        {
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
+        }
     }
 
     void LateUpdate()
     {
+        if (!GameManager.Instance.isGameStarted || target == null) return;
+
         yaw += Input.GetAxis("Mouse X") * mouseSensitivity * Time.deltaTime;
         pitch -= Input.GetAxis("Mouse Y") * mouseSensitivity * Time.deltaTime;
         pitch = Mathf.Clamp(pitch, -verticalRotationLimit, verticalRotationLimit);
