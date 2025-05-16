@@ -9,6 +9,7 @@ TagManager:
   - Floor_Revert
   - Floor_Slow
   - Floor_Fast
+  - Trigger_Dark
   layers:
   - Default
   - TransparentFX

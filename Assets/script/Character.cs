@@ -14,7 +14,8 @@ public class PlayerMovement : MonoBehaviour
         Revert,
         Ice,
         Fast,
-        Fly
+        Fly,
+        Dark
     }
 
     public float moveSpeed = 5f;
@@ -37,6 +38,7 @@ public class PlayerMovement : MonoBehaviour
     public float slowAmount = 0.3f;
     public float fastAmount = 1.8f;
     public float iceFriction = 0.05f;
+    public GameObject darkOverlay;
 
     [Header("사운드")]
     public AudioClip runSound;
@@ -57,6 +59,7 @@ public class PlayerMovement : MonoBehaviour
         controller = GetComponent<CharacterController>();
         animator = GetComponent<Animator>();
         audioSource = GetComponent<AudioSource>();
+        darkOverlay.SetActive(false);
 
         gravity = Mathf.Abs(gravity) * -1f;
         velocity = Vector3.zero;
@@ -234,4 +237,23 @@ public class PlayerMovement : MonoBehaviour
                 break;
         }
     }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "Trigger_Dark")
+        {
+            currentState = State.Dark;
+            darkOverlay.SetActive(true);
+            Debug.Log("Dark");
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+            currentState = State.Normal;
+            darkOverlay.SetActive(false);
+            Debug.Log("DarkExit");
+    }
+
+
 }
