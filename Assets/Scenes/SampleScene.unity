@@ -13690,6 +13690,7 @@ Transform:
   - {fileID: 1862802316}
   - {fileID: 1770946293}
   - {fileID: 577991345}
+  - {fileID: 6650266323020846885}
   - {fileID: 456137373}
   - {fileID: 163706932}
   - {fileID: 1908891184}
@@ -17249,6 +17250,38 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d0b9ccc0cfde7fc4bb11495236725bcf, type: 3}
+--- !u!1 &6269482719409261983
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6650266323020846885}
+  - component: {fileID: 7493036391268710922}
+  m_Layer: 6
+  m_Name: DarkTrigger
+  m_TagString: Trigger_Dark
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6650266323020846885
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6269482719409261983}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: 0.41469327, z: -0, w: 0.9099613}
+  m_LocalPosition: {x: 15.6, y: 54.16, z: 105.8}
+  m_LocalScale: {x: 1429.8992, y: 825.684, z: 421.7867}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1788217886}
+  m_LocalEulerAnglesHint: {x: 0, y: 49, z: 0}
 --- !u!1001 &7054800456467896369
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17306,6 +17339,27 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9d20c9252544e3645bcc8ac5dcaea2bf, type: 3}
+--- !u!65 &7493036391268710922
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6269482719409261983}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.027235813, y: 0.027251335, z: 0.039348766}
+  m_Center: {x: 0.0000000053356173, y: 0.010644509, z: -2.7550223e-17}
 --- !u!1001 &8646967405189989362
 PrefabInstance:
   m_ObjectHideFlags: 0
