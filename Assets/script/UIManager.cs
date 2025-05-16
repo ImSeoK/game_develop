@@ -6,7 +6,7 @@ public class UIManager : MonoBehaviour
     public GameObject player;
     public GameObject mainMenuCamera;
     public GameObject inGameCamera;
-    public GameObject settingsMenuUI;
+    public GameObject settingsWindow;
 
     public void OnClickStart()
     {
@@ -27,13 +27,13 @@ public class UIManager : MonoBehaviour
 
     public void OnClickSettings()
     {
-        mainMenuUI.SetActive(false);
-        settingsMenuUI.SetActive(true);
+        mainMenuUI.SetActive(false); // 버튼들만 감추고
+        settingsWindow.SetActive(true);
     }
 
     public void OnClickBackFromSettings()
     {
-        settingsMenuUI.SetActive(false);
+        settingsWindow.SetActive(false);
         mainMenuUI.SetActive(true);
     }
 
