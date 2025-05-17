@@ -63,6 +63,8 @@ public class PlayerMovement : MonoBehaviour
 
         gravity = Mathf.Abs(gravity) * -1f;
         velocity = Vector3.zero;
+
+        animator.applyRootMotion = false;
     }
 
     void Update()
@@ -150,13 +152,13 @@ public class PlayerMovement : MonoBehaviour
             else if (currentState == State.Fast)
                 targetMove *= fastAmount;
 
-            // ✅ 발소리 재생 처리
+            // 발소리 재생 처리
             if (IsGrounded())
             {
                 footstepTimer -= Time.deltaTime;
                 if (footstepTimer <= 0f)
                 {
-                    // ✅ 현재 타임스케일 기준으로 사운드 선택
+                    // 현재 타임스케일 기준으로 사운드 선택
                     AudioClip selectedClip = (Time.timeScale < 1f && slowRunSound != null) ? slowRunSound : runSound;
 
                     if (selectedClip != null)
@@ -178,43 +180,55 @@ public class PlayerMovement : MonoBehaviour
                 targetMove = Vector3.zero;
         }
 
-        // 점프 및 중력 처리
-        if (IsGrounded())
+        bool grounded = IsGrounded();
+
+        // 1. 점프 입력 처리 (착지한 상태에서만 가능)
+        if (grounded)
         {
-            if (animator.GetBool("isJumping"))
+            // 낙하/점프 상태 초기화
+            if (animator.GetBool("isJumping") || animator.GetBool("isFalling"))
             {
                 animator.SetBool("isJumping", false);
+                animator.SetBool("isFalling", false);
             }
 
+            // 스페이스바 입력 시 점프
             if (Input.GetKeyDown(KeyCode.Space))
             {
                 velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
                 animator.SetBool("isJumping", true);
 
-                // ✅ 점프 사운드 재생
                 if (jumpSound != null)
-                {
                     audioSource.PlayOneShot(jumpSound);
-                }
             }
 
+            // 가벼운 착지 보정
             if (velocity.y < 0)
-            {
                 velocity.y = -2f;
-            }
         }
         else
         {
+            // 공중에 있음 → 낙하 감지
+            if (velocity.y < -0.1f && !animator.GetBool("isFalling"))
+            {
+                animator.SetBool("isFalling", true);
+                animator.SetBool("isJumping", false); // 점프 상태 해제
+            }
+
+            // 최대 낙하 속도 제한
             if (velocity.y < -50f)
                 velocity.y = -50f;
         }
 
+        // 2. 중력 적용
         velocity.y += gravity * Time.deltaTime;
 
+        // 3. 실제 이동 처리
         Vector3 finalMove = targetMove * Time.deltaTime;
         finalMove.y = velocity.y * Time.deltaTime;
         controller.Move(finalMove);
     }
+
 
     private void OnControllerColliderHit(ControllerColliderHit hit)
     {
