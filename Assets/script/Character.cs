@@ -31,7 +31,22 @@ public class PlayerMovement : MonoBehaviour
     private Vector3 targetMove;
     private Animator animator;
 
+    private bool isJumped = false;
+    private float jumpTimeCounter = 0f;
+    private float maxJumpGraceTime = 1.5f;
+
+    float jumpStartTime = -1f;
+    float fallStartTime = -1f;
+
+    private bool wasGrounded = true;
+    private float fallTimer = 0f;
+    private float fallTimeThreshold = 1f;
+
     public float flySpeedMultiplier = 2.5f;
+
+    private bool hasTriggeredMove = false;
+
+    public bool isClimbing = false;
 
     [Header("상태 이상")]
     public State currentState = State.Normal;
@@ -59,7 +74,12 @@ public class PlayerMovement : MonoBehaviour
         controller = GetComponent<CharacterController>();
         animator = GetComponent<Animator>();
         audioSource = GetComponent<AudioSource>();
+
         darkOverlay.SetActive(false);
+
+        // getting up 애니메이션 시작
+        animator.SetTrigger("gettingUpTrigger");
+        animator.SetBool("hasMoved", false);
 
         gravity = Mathf.Abs(gravity) * -1f;
         velocity = Vector3.zero;
@@ -75,6 +95,13 @@ public class PlayerMovement : MonoBehaviour
             FlyMove();  // 비행 모드 이동 처리
         else
             Move();     // 일반 이동 처리
+
+        if (!hasTriggeredMove && (
+        Input.GetAxisRaw("Horizontal") != 0 || Input.GetAxisRaw("Vertical") != 0))
+    {
+        hasTriggeredMove = true;
+        animator.SetBool("hasMoved", true);
+    }
     }
 
     void HandleModeToggle()
@@ -152,19 +179,14 @@ public class PlayerMovement : MonoBehaviour
             else if (currentState == State.Fast)
                 targetMove *= fastAmount;
 
-            // 발소리 재생 처리
             if (IsGrounded())
             {
                 footstepTimer -= Time.deltaTime;
                 if (footstepTimer <= 0f)
                 {
-                    // 현재 타임스케일 기준으로 사운드 선택
                     AudioClip selectedClip = (Time.timeScale < 1f && slowRunSound != null) ? slowRunSound : runSound;
-
                     if (selectedClip != null)
-                    {
                         audioSource.PlayOneShot(selectedClip);
-                    }
 
                     footstepTimer = footstepInterval;
                 }
@@ -173,57 +195,79 @@ public class PlayerMovement : MonoBehaviour
         else
         {
             footstepTimer = 0f;
-
-            if (currentState == State.Ice)
-                targetMove = Vector3.Lerp(targetMove, Vector3.zero, Time.deltaTime / iceFriction);
-            else
-                targetMove = Vector3.zero;
+            targetMove = (currentState == State.Ice)
+                ? Vector3.Lerp(targetMove, Vector3.zero, Time.deltaTime / iceFriction)
+                : Vector3.zero;
         }
 
         bool grounded = IsGrounded();
 
-        // 1. 점프 입력 처리 (착지한 상태에서만 가능)
-        if (grounded)
+        AnimatorStateInfo stateInfo = animator.GetCurrentAnimatorStateInfo(0);
+
+        if (stateInfo.IsName("Climbing"))
         {
-            // 낙하/점프 상태 초기화
-            if (animator.GetBool("isJumping") || animator.GetBool("isFalling"))
-            {
-                animator.SetBool("isJumping", false);
-                animator.SetBool("isFalling", false);
-            }
-
-            // 스페이스바 입력 시 점프
-            if (Input.GetKeyDown(KeyCode.Space))
-            {
-                velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
-                animator.SetBool("isJumping", true);
-
-                if (jumpSound != null)
-                    audioSource.PlayOneShot(jumpSound);
-            }
-
-            // 가벼운 착지 보정
-            if (velocity.y < 0)
-                velocity.y = -2f;
-        }
-        else
-        {
-            // 공중에 있음 → 낙하 감지
-            if (velocity.y < -0.1f && !animator.GetBool("isFalling"))
-            {
-                animator.SetBool("isFalling", true);
-                animator.SetBool("isJumping", false); // 점프 상태 해제
-            }
-
-            // 최대 낙하 속도 제한
-            if (velocity.y < -50f)
-                velocity.y = -50f;
+            jumpStartTime = -1f;
+            fallStartTime = -1f;
+            animator.SetBool("isJumping", false);
+            animator.SetBool("isFalling", false);
+            return;
         }
 
-        // 2. 중력 적용
+        if (!isClimbing)
+        {
+            if (grounded)
+            {
+                jumpStartTime = -1f;
+                fallStartTime = -1f;
+
+                if (animator.GetBool("isJumping") || animator.GetBool("isFalling"))
+                {
+                    animator.SetBool("isJumping", false);
+                    animator.SetBool("isFalling", false);
+                }
+
+                if (Input.GetKeyDown(KeyCode.Space))
+                {
+                    velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
+                    animator.SetBool("isJumping", true);
+                    if (jumpSound != null) audioSource.PlayOneShot(jumpSound);
+                }
+
+                if (velocity.y < 0)
+                    velocity.y = -2f;
+            }
+            else
+            {
+                if (animator.GetBool("isJumping"))
+                {
+                    if (jumpStartTime < 0f)
+                        jumpStartTime = Time.time;
+
+                    if (Time.time - jumpStartTime >= 6f)
+                    {
+                        animator.SetBool("isFalling", true);
+                        animator.SetBool("isJumping", false);
+                        jumpStartTime = -1f;
+                    }
+                }
+                else
+                {
+                    if (fallStartTime < 0f)
+                        fallStartTime = Time.time;
+
+                    if (Time.time - fallStartTime >= 2f)
+                    {
+                        animator.SetBool("isFalling", true);
+                    }
+                }
+
+                if (velocity.y < -50f)
+                    velocity.y = -50f;
+            }
+        }
+
         velocity.y += gravity * Time.deltaTime;
 
-        // 3. 실제 이동 처리
         Vector3 finalMove = targetMove * Time.deltaTime;
         finalMove.y = velocity.y * Time.deltaTime;
         controller.Move(finalMove);

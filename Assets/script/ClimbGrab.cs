@@ -63,6 +63,7 @@ public class ClimbGrab : MonoBehaviour
             if (TryGetComponent<PlayerMovement>(out var move))
             {
                 move.enabled = false;
+                move.isClimbing = true;
             }
 
             // 🔽 클라이밍 애니메이션 재생
@@ -99,6 +100,7 @@ public class ClimbGrab : MonoBehaviour
         if (TryGetComponent<PlayerMovement>(out var move))
         {
             move.enabled = true;
+            move.isClimbing = false;
         }
 
         // 🔽 클라이밍 종료 시 Idle 상태 등으로 전환되도록 비워두거나 필요 시 전환 애니메이션 설정

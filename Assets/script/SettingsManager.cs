@@ -10,6 +10,7 @@ public class SettingsManager : MonoBehaviour
     [Header("오디오")]
     public AudioSource bgmAudioSource;
 
+
     [Header("카메라")]
     public ThirdPersonCamera thirdPersonCamera;
 
@@ -31,6 +32,6 @@ public class SettingsManager : MonoBehaviour
 
     public void SetMouseSensitivity(float value)
     {
-        thirdPersonCamera.mouseSensitivity = value;
+        thirdPersonCamera.mouseSensitivity = value * 100f;
     }
 }

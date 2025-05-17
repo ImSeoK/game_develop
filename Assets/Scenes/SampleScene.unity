@@ -961,12 +961,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 83107652}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.01999998, z: 80.19995}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 16.863646, y: -1.9861774, z: 108.15869}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 364130370}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &85137906
 PrefabInstance:
@@ -2387,6 +2387,38 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 40ec9cfcdc5c1924b8046ce9b97525b6, type: 3}
   m_PrefabInstance: {fileID: 384765771}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &364130369
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 364130370}
+  m_Layer: 0
+  m_Name: SoundSource
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &364130370
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 364130369}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -16.863646, y: 1.9661775, z: -27.958738}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 83107654}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &366043267
 GameObject:
   m_ObjectHideFlags: 0
@@ -2621,10 +2653,10 @@ MonoBehaviour:
   m_FillRect: {fileID: 1234736814}
   m_HandleRect: {fileID: 514868768}
   m_Direction: 0
-  m_MinValue: 0
-  m_MaxValue: 1
+  m_MinValue: 0.5
+  m_MaxValue: 2
   m_WholeNumbers: 0
-  m_Value: 0
+  m_Value: 2
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -4741,6 +4773,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   flySpeedMultiplier: 2.5
+  isClimbing: 0
   currentState: 0
   slowAmount: 0.3
   fastAmount: 1.8
@@ -4797,7 +4830,7 @@ AudioSource:
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
-  MaxDistance: 500
+  MaxDistance: 10.24036
   Pan2D: 0
   rolloffMode: 0
   BypassEffects: 0
@@ -9022,6 +9055,10 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Floor_Ice
       objectReference: {fileID: 0}
+    - target: {fileID: 1275246846200291361, guid: e07cd428c18dd15409a60fbd98a72feb, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 84498b92bb6b900469276ab7377a1cf0, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -10036,6 +10073,10 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Floor_Ice
       objectReference: {fileID: 0}
+    - target: {fileID: 1275246846200291361, guid: e07cd428c18dd15409a60fbd98a72feb, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 84498b92bb6b900469276ab7377a1cf0, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -10511,6 +10552,10 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Floor_Ice
       objectReference: {fileID: 0}
+    - target: {fileID: 1275246846200291361, guid: e07cd428c18dd15409a60fbd98a72feb, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 84498b92bb6b900469276ab7377a1cf0, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -12097,19 +12142,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c663f575bfd84fe4bb18fdbaae14f4ea, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -17.39
+      value: -21.647
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c663f575bfd84fe4bb18fdbaae14f4ea, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.789
+      value: 1.323
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c663f575bfd84fe4bb18fdbaae14f4ea, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -28.073
+      value: -27.439
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c663f575bfd84fe4bb18fdbaae14f4ea, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.7071068
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c663f575bfd84fe4bb18fdbaae14f4ea, type: 3}
       propertyPath: m_LocalRotation.x
@@ -12117,7 +12162,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c663f575bfd84fe4bb18fdbaae14f4ea, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.7071068
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c663f575bfd84fe4bb18fdbaae14f4ea, type: 3}
       propertyPath: m_LocalRotation.z
@@ -12129,7 +12174,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c663f575bfd84fe4bb18fdbaae14f4ea, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 90
+      value: 180
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c663f575bfd84fe4bb18fdbaae14f4ea, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -17658,6 +17703,10 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Floor_Ice
       objectReference: {fileID: 0}
+    - target: {fileID: 1275246846200291361, guid: e07cd428c18dd15409a60fbd98a72feb, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 84498b92bb6b900469276ab7377a1cf0, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -20122,6 +20171,6 @@ SceneRoots:
   - {fileID: 467023551}
   - {fileID: 1170204186}
   - {fileID: 583211802}
-  - {fileID: 83107654}
   - {fileID: 5405192256351136067}
   - {fileID: 1771477917}
+  - {fileID: 364130370}
