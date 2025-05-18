@@ -12,6 +12,7 @@ public class UIManager : MonoBehaviour
 
     private bool isSettingsOpen = false;
     private bool isInMainMenu = false; // settings가 어디서 열렸는지 추적
+    private bool hasStarted = false;
 
     void Awake()
     {
@@ -38,6 +39,14 @@ public class UIManager : MonoBehaviour
         mainMenuCamera.SetActive(false);
         inGameCamera.SetActive(true);
         player.SetActive(true);
+
+        // getting up 애니메이션 실행 (여기로 이동)
+        Animator animator = player.GetComponent<Animator>();
+        if (animator != null)
+        {
+            animator.SetTrigger("gettingUpTrigger");
+            animator.SetBool("hasMoved", false); // 방향키 누르기 전까지 idle로 안 넘어가게
+        }
 
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;

@@ -77,10 +77,6 @@ public class PlayerMovement : MonoBehaviour
 
         darkOverlay.SetActive(false);
 
-        // getting up 애니메이션 시작
-        animator.SetTrigger("gettingUpTrigger");
-        animator.SetBool("hasMoved", false);
-
         gravity = Mathf.Abs(gravity) * -1f;
         velocity = Vector3.zero;
 
