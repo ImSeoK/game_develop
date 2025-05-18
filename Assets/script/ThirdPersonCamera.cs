@@ -9,6 +9,8 @@ public class ThirdPersonCamera : MonoBehaviour
     public float distance = 4f;
     public float verticalRotationLimit = 80f;
 
+    public bool isCameraControlEnabled = true;
+
     float yaw = 0f;
     float pitch = 0f;
 
@@ -28,7 +30,7 @@ public class ThirdPersonCamera : MonoBehaviour
 
     void LateUpdate()
     {
-        if (!GameManager.Instance.isGameStarted || target == null) return;
+        if (!GameManager.Instance.isGameStarted || target == null || !isCameraControlEnabled) return;
 
         yaw += Input.GetAxis("Mouse X") * mouseSensitivity * Time.deltaTime;
         pitch -= Input.GetAxis("Mouse Y") * mouseSensitivity * Time.deltaTime;
@@ -38,6 +40,6 @@ public class ThirdPersonCamera : MonoBehaviour
         Vector3 desiredPosition = target.position - rotation * Vector3.forward * distance + Vector3.up * offset.y;
 
         transform.position = desiredPosition;
-        transform.LookAt(target.position + Vector3.up * 1.5f); // 상체 기준으로 보기
+        transform.LookAt(target.position + Vector3.up * 1.5f);
     }
 }

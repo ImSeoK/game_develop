@@ -10,6 +10,7 @@ public class UIManager : MonoBehaviour
 
     public static UIManager Instance;
 
+    private ThirdPersonCamera thirdPersonCamera;
     private bool isSettingsOpen = false;
     private bool isInMainMenu = false; // settings가 어디서 열렸는지 추적
     private bool hasStarted = false;
@@ -18,6 +19,8 @@ public class UIManager : MonoBehaviour
     {
         if (Instance == null) Instance = this;
         else Destroy(gameObject);
+
+        thirdPersonCamera = inGameCamera.GetComponent<ThirdPersonCamera>();
     }
 
     void Update()
@@ -71,6 +74,11 @@ public class UIManager : MonoBehaviour
 
         Time.timeScale = isSettingsOpen ? 0f : 1f;
         isInMainMenu = false; // 인게임 중 ESC로 연 것
+
+        if (thirdPersonCamera != null)
+        {
+            thirdPersonCamera.isCameraControlEnabled = !isSettingsOpen;
+        }
     }
 
     public void OnClickResume()
@@ -89,6 +97,11 @@ public class UIManager : MonoBehaviour
         {
             Cursor.visible = false;
             Cursor.lockState = CursorLockMode.Locked;
+        }
+
+        if (thirdPersonCamera != null)
+        {
+            thirdPersonCamera.isCameraControlEnabled = true;
         }
     }
 
