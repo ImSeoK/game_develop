@@ -48,6 +48,9 @@ public class PlayerMovement : MonoBehaviour
 
     public bool isClimbing = false;
 
+    private bool isGameCleared = false;
+    public bool isVictory = false;
+
     [Header("상태 이상")]
     public State currentState = State.Normal;
     public float slowAmount = 0.3f;
@@ -151,6 +154,8 @@ public class PlayerMovement : MonoBehaviour
 
     void Move()
     {
+        if (isVictory) return;
+
         float horizontal = Input.GetAxisRaw("Horizontal");
         float vertical = Input.GetAxisRaw("Vertical");
         Vector3 direction = new Vector3(horizontal, 0f, vertical).normalized;
@@ -269,6 +274,60 @@ public class PlayerMovement : MonoBehaviour
         controller.Move(finalMove);
     }
 
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "Trigger_Dark")
+        {
+            currentState = State.Dark;
+            darkOverlay.SetActive(true);
+            Debug.Log("Dark");
+        }
+
+        // 게임 클리어 트리거
+        if (!isGameCleared && other.CompareTag("Finish")) // Finish 태그 사용
+        {
+            isGameCleared = true;
+            TriggerVictory();
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+            currentState = State.Normal;
+            darkOverlay.SetActive(false);
+            Debug.Log("DarkExit");
+    }
+
+    private void TriggerVictory()
+    {
+        animator.SetTrigger("Victory");
+
+        // 카메라 전환 전에 기존 카메라 제어 끄기
+        var cam = Camera.main;
+
+        // ThirdPersonCamera 비활성화
+        ThirdPersonCamera tpc = cam.GetComponent<ThirdPersonCamera>();
+        if (tpc != null)
+        {
+            tpc.isCameraControlEnabled = false;
+        }
+
+        // CameraFollow 실행
+        CameraFollow camFollow = cam.GetComponent<CameraFollow>();
+        if (camFollow != null)
+        {
+            camFollow.TriggerVictoryCamera();
+        }
+
+        PlayerMovement move = FindObjectOfType<PlayerMovement>();
+        if (move != null)
+        {
+            move.isVictory = true;
+        }
+
+        Debug.Log("Victory!");
+    }
+
 
     private void OnControllerColliderHit(ControllerColliderHit hit)
     {
@@ -292,22 +351,7 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.gameObject.tag == "Trigger_Dark")
-        {
-            currentState = State.Dark;
-            darkOverlay.SetActive(true);
-            Debug.Log("Dark");
-        }
-    }
 
-    private void OnTriggerExit(Collider other)
-    {
-            currentState = State.Normal;
-            darkOverlay.SetActive(false);
-            Debug.Log("DarkExit");
-    }
 
 
 }
