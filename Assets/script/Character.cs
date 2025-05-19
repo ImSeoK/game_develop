@@ -283,6 +283,11 @@ public class PlayerMovement : MonoBehaviour
             Debug.Log("Dark");
         }
 
+        if (other.gameObject.tag == "Floor_Normal")
+        {
+            currentState = State.Normal;
+        } 
+
         // 게임 클리어 트리거
         if (!isGameCleared && other.CompareTag("Finish")) // Finish 태그 사용
         {
