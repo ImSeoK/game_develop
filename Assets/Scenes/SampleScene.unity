@@ -133,7 +133,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3654786394008814729, guid: e1faae3d6564f904d85a551a0c499036, type: 3}
       propertyPath: m_Name
-      value: wood_Square (22)
+      value: Fast_wood_Square (22)
       objectReference: {fileID: 0}
     - target: {fileID: 3654786394008814729, guid: e1faae3d6564f904d85a551a0c499036, type: 3}
       propertyPath: m_TagString
@@ -202,7 +202,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 1788217886}
+    m_TransformParent: {fileID: 324234636}
     m_Modifications:
     - target: {fileID: 3654786394008814729, guid: e1faae3d6564f904d85a551a0c499036, type: 3}
       propertyPath: m_Name
@@ -242,7 +242,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4175884070986964531, guid: e1faae3d6564f904d85a551a0c499036, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 4175884070986964531, guid: e1faae3d6564f904d85a551a0c499036, type: 3}
       propertyPath: m_LocalRotation.y
@@ -348,6 +348,42 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 314016817633540860, guid: e12b0f4d6d564b8418fb110d49fd841c, type: 3}
   m_PrefabInstance: {fileID: 796282118}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &31688692
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 31688693}
+  m_Layer: 0
+  m_Name: Normal_Boxes
+  m_TagString: Floor_Normal
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &31688693
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 31688692}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 180303105}
+  - {fileID: 1288236162}
+  - {fileID: 652435640}
+  - {fileID: 2089881798}
+  - {fileID: 2029542056}
+  m_Father: {fileID: 1788217886}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &34853807
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -410,7 +446,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1085451130495557702, guid: e12b0f4d6d564b8418fb110d49fd841c, type: 3}
       propertyPath: m_Name
-      value: lantern (15)
+      value: Normal_lantern (15)
       objectReference: {fileID: 0}
     - target: {fileID: 7207233809707238320, guid: e12b0f4d6d564b8418fb110d49fd841c, type: 3}
       propertyPath: m_TagString
@@ -440,7 +476,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 1788217886}
+    m_TransformParent: {fileID: 1431498221}
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 40ec9cfcdc5c1924b8046ce9b97525b6, type: 3}
       propertyPath: m_LocalScale.x
@@ -501,6 +537,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 40ec9cfcdc5c1924b8046ce9b97525b6, type: 3}
       propertyPath: m_Name
       value: fences_horizontal_part_04 (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 40ec9cfcdc5c1924b8046ce9b97525b6, type: 3}
+      propertyPath: m_TagString
+      value: Floor_Normal
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -577,7 +617,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3160117620560890130, guid: 654b076cb2e53144299d4c8e14a11e25, type: 3}
       propertyPath: m_Name
-      value: wood_Rect_Long (1)
+      value: Normal_wood_Rect_Long (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3160117620560890130, guid: 654b076cb2e53144299d4c8e14a11e25, type: 3}
+      propertyPath: m_TagString
+      value: Floor_Normal
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -595,7 +639,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 1788217886}
+    m_TransformParent: {fileID: 1431498221}
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: fe29b2d556a49684ebbfa9c4e6d5735c, type: 3}
       propertyPath: m_LocalScale.x
@@ -660,6 +704,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: fe29b2d556a49684ebbfa9c4e6d5735c, type: 3}
       propertyPath: m_Layer
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: fe29b2d556a49684ebbfa9c4e6d5735c, type: 3}
+      propertyPath: m_TagString
+      value: Floor_Normal
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -975,7 +1023,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 1788217886}
+    m_TransformParent: {fileID: 1431498221}
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 40ec9cfcdc5c1924b8046ce9b97525b6, type: 3}
       propertyPath: m_LocalScale.x
@@ -1037,6 +1085,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: fences_horizontal_part_04 (17)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 40ec9cfcdc5c1924b8046ce9b97525b6, type: 3}
+      propertyPath: m_TagString
+      value: Floor_Normal
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1075,7 +1127,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3654786394008814729, guid: e1faae3d6564f904d85a551a0c499036, type: 3}
       propertyPath: m_Name
-      value: wood_Square (7)
+      value: Normal_wood_Square (7)
       objectReference: {fileID: 0}
     - target: {fileID: 3654786394008814729, guid: e1faae3d6564f904d85a551a0c499036, type: 3}
       propertyPath: m_TagString
@@ -1207,6 +1259,39 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d7f16bebf84a8be45a4edf754a799508, type: 3}
+--- !u!1 &130119818
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 130119819}
+  m_Layer: 0
+  m_Name: Dark_wood_cylinder
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &130119819
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 130119818}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1016825631}
+  - {fileID: 101049456}
+  m_Father: {fileID: 1788217886}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &135571545 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: fe29b2d556a49684ebbfa9c4e6d5735c, type: 3}
@@ -1297,7 +1382,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 1788217886}
+    m_TransformParent: {fileID: 1431498221}
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 40ec9cfcdc5c1924b8046ce9b97525b6, type: 3}
       propertyPath: m_LocalScale.x
@@ -1359,6 +1444,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: fences_horizontal_part_04 (12)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 40ec9cfcdc5c1924b8046ce9b97525b6, type: 3}
+      propertyPath: m_TagString
+      value: Floor_Normal
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1387,7 +1476,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3654786394008814729, guid: e1faae3d6564f904d85a551a0c499036, type: 3}
       propertyPath: m_Name
-      value: wood_Square (13)
+      value: Normal_wood_Square (13)
       objectReference: {fileID: 0}
     - target: {fileID: 3654786394008814729, guid: e1faae3d6564f904d85a551a0c499036, type: 3}
       propertyPath: m_TagString
@@ -1630,7 +1719,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 1788217886}
+    m_TransformParent: {fileID: 1431498221}
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 40ec9cfcdc5c1924b8046ce9b97525b6, type: 3}
       propertyPath: m_LocalScale.x
@@ -1692,6 +1781,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: fences_horizontal_part_04 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 40ec9cfcdc5c1924b8046ce9b97525b6, type: 3}
+      propertyPath: m_TagString
+      value: Floor_Normal
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1706,7 +1799,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 1788217886}
+    m_TransformParent: {fileID: 1431498221}
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 40ec9cfcdc5c1924b8046ce9b97525b6, type: 3}
       propertyPath: m_LocalScale.x
@@ -1767,6 +1860,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 40ec9cfcdc5c1924b8046ce9b97525b6, type: 3}
       propertyPath: m_Name
       value: fences_horizontal_part_04
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 40ec9cfcdc5c1924b8046ce9b97525b6, type: 3}
+      propertyPath: m_TagString
+      value: Floor_Normal
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2102,7 +2199,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2159447657311926417, guid: 8547587fcb7ed0348b5a62f1329a9b6f, type: 3}
       propertyPath: m_Name
-      value: wood_Cylinder Variant (1)
+      value: Normal_wood_Cylinder Variant (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2159447657311926417, guid: 8547587fcb7ed0348b5a62f1329a9b6f, type: 3}
+      propertyPath: m_TagString
+      value: Floor_Normal
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2120,7 +2221,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 1788217886}
+    m_TransformParent: {fileID: 1431498221}
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: fe29b2d556a49684ebbfa9c4e6d5735c, type: 3}
       propertyPath: m_LocalScale.x
@@ -2185,6 +2286,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: fe29b2d556a49684ebbfa9c4e6d5735c, type: 3}
       propertyPath: m_Layer
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: fe29b2d556a49684ebbfa9c4e6d5735c, type: 3}
+      propertyPath: m_TagString
+      value: Floor_Normal
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2372,7 +2477,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3654786394008814729, guid: e1faae3d6564f904d85a551a0c499036, type: 3}
       propertyPath: m_Name
-      value: wood_Square (24)
+      value: Normal_wood_Square (24)
       objectReference: {fileID: 0}
     - target: {fileID: 3654786394008814729, guid: e1faae3d6564f904d85a551a0c499036, type: 3}
       propertyPath: m_TagString
@@ -2580,7 +2685,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1085451130495557702, guid: e12b0f4d6d564b8418fb110d49fd841c, type: 3}
       propertyPath: m_Name
-      value: lantern (11)
+      value: Normal_lantern (11)
       objectReference: {fileID: 0}
     - target: {fileID: 7207233809707238320, guid: e12b0f4d6d564b8418fb110d49fd841c, type: 3}
       propertyPath: m_TagString
@@ -2641,6 +2746,41 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 40ec9cfcdc5c1924b8046ce9b97525b6, type: 3}
   m_PrefabInstance: {fileID: 438271479}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &324234635
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 324234636}
+  m_Layer: 0
+  m_Name: Normal_Hall
+  m_TagString: Floor_Normal
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &324234636
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 324234635}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1294516767}
+  - {fileID: 1953964070}
+  - {fileID: 1862802316}
+  - {fileID: 1770946293}
+  m_Father: {fileID: 1788217886}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &332949006 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4843220351572358, guid: 5d17cce7704ff0c44985b9f2b7c1f930, type: 3}
@@ -2652,7 +2792,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 1788217886}
+    m_TransformParent: {fileID: 1431498221}
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 40ec9cfcdc5c1924b8046ce9b97525b6, type: 3}
       propertyPath: m_LocalScale.x
@@ -2713,6 +2853,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 40ec9cfcdc5c1924b8046ce9b97525b6, type: 3}
       propertyPath: m_Name
       value: fences_horizontal_part_04 (23)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 40ec9cfcdc5c1924b8046ce9b97525b6, type: 3}
+      propertyPath: m_TagString
+      value: Floor_Normal
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2909,7 +3053,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 1788217886}
+    m_TransformParent: {fileID: 1431498221}
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 40ec9cfcdc5c1924b8046ce9b97525b6, type: 3}
       propertyPath: m_LocalScale.x
@@ -2970,6 +3114,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 40ec9cfcdc5c1924b8046ce9b97525b6, type: 3}
       propertyPath: m_Name
       value: fences_horizontal_part_04 (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 40ec9cfcdc5c1924b8046ce9b97525b6, type: 3}
+      propertyPath: m_TagString
+      value: Floor_Normal
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3131,7 +3279,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2983592157584673976, guid: 776aaad933fbb9b438a5c9100f477056, type: 3}
       propertyPath: m_Name
-      value: wood_Cylinder (7)
+      value: Fast_wood_Cylinder (7)
       objectReference: {fileID: 0}
     - target: {fileID: 2983592157584673976, guid: 776aaad933fbb9b438a5c9100f477056, type: 3}
       propertyPath: m_TagString
@@ -3205,7 +3353,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1085451130495557702, guid: e12b0f4d6d564b8418fb110d49fd841c, type: 3}
       propertyPath: m_Name
-      value: lantern (12)
+      value: Normal_lantern (12)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3222,11 +3370,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3654786394008814729, guid: e1faae3d6564f904d85a551a0c499036, type: 3}
       propertyPath: m_Name
-      value: wood_Square (5)
+      value: Fast_wood_Square (5)
       objectReference: {fileID: 0}
     - target: {fileID: 3654786394008814729, guid: e1faae3d6564f904d85a551a0c499036, type: 3}
       propertyPath: m_TagString
-      value: Floor_Normal
+      value: Floor_Fast
       objectReference: {fileID: 0}
     - target: {fileID: 4175884070986964531, guid: e1faae3d6564f904d85a551a0c499036, type: 3}
       propertyPath: m_LocalScale.y
@@ -3413,7 +3561,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2983592157584673976, guid: 776aaad933fbb9b438a5c9100f477056, type: 3}
       propertyPath: m_Name
-      value: wood_Cylinder (5)
+      value: Fast_wood_Cylinder (5)
       objectReference: {fileID: 0}
     - target: {fileID: 2983592157584673976, guid: 776aaad933fbb9b438a5c9100f477056, type: 3}
       propertyPath: m_TagString
@@ -3445,7 +3593,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 1788217886}
+    m_TransformParent: {fileID: 1431498221}
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 40ec9cfcdc5c1924b8046ce9b97525b6, type: 3}
       propertyPath: m_LocalScale.x
@@ -3506,6 +3654,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 40ec9cfcdc5c1924b8046ce9b97525b6, type: 3}
       propertyPath: m_Name
       value: fences_horizontal_part_04 (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 40ec9cfcdc5c1924b8046ce9b97525b6, type: 3}
+      propertyPath: m_TagString
+      value: Floor_Normal
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3662,7 +3814,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2983592157584673976, guid: 776aaad933fbb9b438a5c9100f477056, type: 3}
       propertyPath: m_Name
-      value: wood_Cylinder (12)
+      value: Normal_wood_Cylinder (12)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2983592157584673976, guid: 776aaad933fbb9b438a5c9100f477056, type: 3}
+      propertyPath: m_TagString
+      value: Floor_Normal
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3679,7 +3835,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3654786394008814729, guid: e1faae3d6564f904d85a551a0c499036, type: 3}
       propertyPath: m_Name
-      value: wood_Square (8)
+      value: Fast_wood_Square (8)
       objectReference: {fileID: 0}
     - target: {fileID: 3654786394008814729, guid: e1faae3d6564f904d85a551a0c499036, type: 3}
       propertyPath: m_TagString
@@ -3918,7 +4074,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 1788217886}
+    m_TransformParent: {fileID: 1431498221}
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 40ec9cfcdc5c1924b8046ce9b97525b6, type: 3}
       propertyPath: m_LocalScale.x
@@ -3979,6 +4135,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 40ec9cfcdc5c1924b8046ce9b97525b6, type: 3}
       propertyPath: m_Name
       value: fences_horizontal_part_04 (15)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 40ec9cfcdc5c1924b8046ce9b97525b6, type: 3}
+      propertyPath: m_TagString
+      value: Floor_Normal
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4231,7 +4391,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 1788217886}
+    m_TransformParent: {fileID: 1436160186}
     m_Modifications:
     - target: {fileID: 314016817633540860, guid: e12b0f4d6d564b8418fb110d49fd841c, type: 3}
       propertyPath: m_LocalScale.x
@@ -4514,7 +4674,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 1788217886}
+    m_TransformParent: {fileID: 1431498221}
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 40ec9cfcdc5c1924b8046ce9b97525b6, type: 3}
       propertyPath: m_LocalScale.x
@@ -4575,6 +4735,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 40ec9cfcdc5c1924b8046ce9b97525b6, type: 3}
       propertyPath: m_Name
       value: fences_horizontal_part_04 (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 40ec9cfcdc5c1924b8046ce9b97525b6, type: 3}
+      propertyPath: m_TagString
+      value: Floor_Normal
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4646,7 +4810,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2983592157584673976, guid: 776aaad933fbb9b438a5c9100f477056, type: 3}
       propertyPath: m_Name
-      value: wood_Cylinder (6)
+      value: Fast_wood_Cylinder (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2983592157584673976, guid: 776aaad933fbb9b438a5c9100f477056, type: 3}
+      propertyPath: m_TagString
+      value: Floor_Fast
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4669,7 +4837,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 1788217886}
+    m_TransformParent: {fileID: 1170133085}
     m_Modifications:
     - target: {fileID: 171646002528836469, guid: a212788762a17574cb637c773eafe4b2, type: 3}
       propertyPath: m_LocalScale.x
@@ -4852,7 +5020,7 @@ GameObject:
   - component: {fileID: 572210226}
   - component: {fileID: 572210225}
   m_Layer: 0
-  m_Name: Dark (1)
+  m_Name: Dark_1
   m_TagString: Trigger_Dark
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4937,12 +5105,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 572210224}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 22.4, y: 13.42, z: 91.26}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 22.409, y: 13.26, z: 102.825005}
   m_LocalScale: {x: 31.525126, y: 30.051485, z: 25.189507}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1788217886}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 3.92}
 --- !u!1 &573560722 stripped
 GameObject:
@@ -5047,7 +5215,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 1788217886}
+    m_TransformParent: {fileID: 1431498221}
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: fe29b2d556a49684ebbfa9c4e6d5735c, type: 3}
       propertyPath: m_LocalScale.x
@@ -5112,6 +5280,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: fe29b2d556a49684ebbfa9c4e6d5735c, type: 3}
       propertyPath: m_Layer
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: fe29b2d556a49684ebbfa9c4e6d5735c, type: 3}
+      propertyPath: m_TagString
+      value: Floor_Normal
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5403,7 +5575,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3160117620560890130, guid: 654b076cb2e53144299d4c8e14a11e25, type: 3}
       propertyPath: m_Name
-      value: wood_Rect_Long (2)
+      value: Normal_wood_Rect_Long (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3160117620560890130, guid: 654b076cb2e53144299d4c8e14a11e25, type: 3}
+      propertyPath: m_TagString
+      value: Floor_Normal
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5443,7 +5619,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 1788217886}
+    m_TransformParent: {fileID: 1431498221}
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: fe29b2d556a49684ebbfa9c4e6d5735c, type: 3}
       propertyPath: m_LocalScale.x
@@ -5509,6 +5685,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: fe29b2d556a49684ebbfa9c4e6d5735c, type: 3}
+      propertyPath: m_TagString
+      value: Floor_Normal
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5559,7 +5739,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 1788217886}
+    m_TransformParent: {fileID: 31688693}
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 380e85b57857ec448ac39c1b5b897578, type: 3}
       propertyPath: m_LocalScale.x
@@ -5567,7 +5747,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 380e85b57857ec448ac39c1b5b897578, type: 3}
       propertyPath: m_LocalScale.y
-      value: 376.23776
+      value: 376.2378
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 380e85b57857ec448ac39c1b5b897578, type: 3}
       propertyPath: m_LocalScale.z
@@ -5625,6 +5805,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 380e85b57857ec448ac39c1b5b897578, type: 3}
+      propertyPath: m_TagString
+      value: Floor_Normal
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5639,7 +5823,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 1788217886}
+    m_TransformParent: {fileID: 1431498221}
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: fe29b2d556a49684ebbfa9c4e6d5735c, type: 3}
       propertyPath: m_LocalScale.x
@@ -5705,6 +5889,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: fe29b2d556a49684ebbfa9c4e6d5735c, type: 3}
+      propertyPath: m_TagString
+      value: Floor_Normal
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5724,7 +5912,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 1788217886}
+    m_TransformParent: {fileID: 1431498221}
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: fe29b2d556a49684ebbfa9c4e6d5735c, type: 3}
       propertyPath: m_LocalScale.x
@@ -5790,6 +5978,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: fe29b2d556a49684ebbfa9c4e6d5735c, type: 3}
+      propertyPath: m_TagString
+      value: Floor_Normal
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5830,7 +6022,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 1788217886}
+    m_TransformParent: {fileID: 1170133085}
     m_Modifications:
     - target: {fileID: 2462354017993987586, guid: 776aaad933fbb9b438a5c9100f477056, type: 3}
       propertyPath: m_LocalScale.x
@@ -5842,7 +6034,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2462354017993987586, guid: 776aaad933fbb9b438a5c9100f477056, type: 3}
       propertyPath: m_LocalScale.z
-      value: 87.40249
+      value: 87.40248
       objectReference: {fileID: 0}
     - target: {fileID: 2462354017993987586, guid: 776aaad933fbb9b438a5c9100f477056, type: 3}
       propertyPath: m_LocalPosition.x
@@ -6068,7 +6260,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 1788217886}
+    m_TransformParent: {fileID: 1436160186}
     m_Modifications:
     - target: {fileID: 314016817633540860, guid: e12b0f4d6d564b8418fb110d49fd841c, type: 3}
       propertyPath: m_LocalScale.x
@@ -6490,7 +6682,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 1788217886}
+    m_TransformParent: {fileID: 1436160186}
     m_Modifications:
     - target: {fileID: 314016817633540860, guid: e12b0f4d6d564b8418fb110d49fd841c, type: 3}
       propertyPath: m_LocalScale.x
@@ -6569,7 +6761,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3654786394008814729, guid: e1faae3d6564f904d85a551a0c499036, type: 3}
       propertyPath: m_Name
-      value: wood_Square (11)
+      value: Normal_wood_Square (11)
       objectReference: {fileID: 0}
     - target: {fileID: 3654786394008814729, guid: e1faae3d6564f904d85a551a0c499036, type: 3}
       propertyPath: m_TagString
@@ -6698,11 +6890,15 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 9def696716f9d5e4b944d9961f190c50, type: 2}
     - target: {fileID: 919132149155446097, guid: 380e85b57857ec448ac39c1b5b897578, type: 3}
       propertyPath: m_Name
-      value: wood_Box 02 (10)
+      value: Normal_wood_Box 02 (10)
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 380e85b57857ec448ac39c1b5b897578, type: 3}
       propertyPath: m_Layer
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 380e85b57857ec448ac39c1b5b897578, type: 3}
+      propertyPath: m_TagString
+      value: Floor_Normal
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -6718,11 +6914,11 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 1788217886}
+    m_TransformParent: {fileID: 1466350404}
     m_Modifications:
     - target: {fileID: 171646002528836469, guid: a212788762a17574cb637c773eafe4b2, type: 3}
       propertyPath: m_LocalScale.x
-      value: 123.28725
+      value: 123.287254
       objectReference: {fileID: 0}
     - target: {fileID: 171646002528836469, guid: a212788762a17574cb637c773eafe4b2, type: 3}
       propertyPath: m_LocalScale.y
@@ -6776,6 +6972,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: wood_Rect_Short (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 660374988589138383, guid: a212788762a17574cb637c773eafe4b2, type: 3}
+      propertyPath: m_TagString
+      value: Trigger_Dark
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6792,7 +6992,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 1788217886}
+    m_TransformParent: {fileID: 130119819}
     m_Modifications:
     - target: {fileID: 2462354017993987586, guid: 776aaad933fbb9b438a5c9100f477056, type: 3}
       propertyPath: m_LocalScale.x
@@ -6871,11 +7071,11 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 1788217886}
+    m_TransformParent: {fileID: 1209207958}
     m_Modifications:
     - target: {fileID: 314016817633540860, guid: e12b0f4d6d564b8418fb110d49fd841c, type: 3}
       propertyPath: m_LocalScale.x
-      value: 13.652153
+      value: 13.652154
       objectReference: {fileID: 0}
     - target: {fileID: 314016817633540860, guid: e12b0f4d6d564b8418fb110d49fd841c, type: 3}
       propertyPath: m_LocalScale.z
@@ -6899,7 +7099,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 314016817633540860, guid: e12b0f4d6d564b8418fb110d49fd841c, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.14883922
+      value: -0.14883924
       objectReference: {fileID: 0}
     - target: {fileID: 314016817633540860, guid: e12b0f4d6d564b8418fb110d49fd841c, type: 3}
       propertyPath: m_LocalRotation.y
@@ -6907,7 +7107,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 314016817633540860, guid: e12b0f4d6d564b8418fb110d49fd841c, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.027655296
+      value: -0.027655298
       objectReference: {fileID: 0}
     - target: {fileID: 314016817633540860, guid: e12b0f4d6d564b8418fb110d49fd841c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -7252,7 +7452,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 1788217886}
+    m_TransformParent: {fileID: 1084493610}
     m_Modifications:
     - target: {fileID: 314016817633540860, guid: e12b0f4d6d564b8418fb110d49fd841c, type: 3}
       propertyPath: m_LocalPosition.x
@@ -7335,7 +7535,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 1788217886}
+    m_TransformParent: {fileID: 1431498221}
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: fe29b2d556a49684ebbfa9c4e6d5735c, type: 3}
       propertyPath: m_LocalScale.x
@@ -7400,6 +7600,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: fe29b2d556a49684ebbfa9c4e6d5735c, type: 3}
       propertyPath: m_Layer
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: fe29b2d556a49684ebbfa9c4e6d5735c, type: 3}
+      propertyPath: m_TagString
+      value: Floor_Normal
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -7498,7 +7702,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3654786394008814729, guid: e1faae3d6564f904d85a551a0c499036, type: 3}
       propertyPath: m_Name
-      value: wood_Square (1)
+      value: Normal_wood_Square (1)
       objectReference: {fileID: 0}
     - target: {fileID: 3654786394008814729, guid: e1faae3d6564f904d85a551a0c499036, type: 3}
       propertyPath: m_TagString
@@ -7590,7 +7794,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 1788217886}
+    m_TransformParent: {fileID: 1431498221}
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: fe29b2d556a49684ebbfa9c4e6d5735c, type: 3}
       propertyPath: m_LocalScale.x
@@ -7655,6 +7859,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: fe29b2d556a49684ebbfa9c4e6d5735c, type: 3}
       propertyPath: m_Layer
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: fe29b2d556a49684ebbfa9c4e6d5735c, type: 3}
+      propertyPath: m_TagString
+      value: Floor_Normal
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -7885,7 +8093,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 1788217886}
+    m_TransformParent: {fileID: 1431498221}
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 40ec9cfcdc5c1924b8046ce9b97525b6, type: 3}
       propertyPath: m_LocalScale.x
@@ -7946,6 +8154,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 40ec9cfcdc5c1924b8046ce9b97525b6, type: 3}
       propertyPath: m_Name
       value: fences_horizontal_part_04 (22)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 40ec9cfcdc5c1924b8046ce9b97525b6, type: 3}
+      propertyPath: m_TagString
+      value: Floor_Normal
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -8061,7 +8273,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 1788217886}
+    m_TransformParent: {fileID: 1431498221}
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 40ec9cfcdc5c1924b8046ce9b97525b6, type: 3}
       propertyPath: m_LocalScale.x
@@ -8122,6 +8334,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 40ec9cfcdc5c1924b8046ce9b97525b6, type: 3}
       propertyPath: m_Name
       value: fences_horizontal_part_04 (16)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 40ec9cfcdc5c1924b8046ce9b97525b6, type: 3}
+      propertyPath: m_TagString
+      value: Floor_Normal
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -8303,7 +8519,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1085451130495557702, guid: e12b0f4d6d564b8418fb110d49fd841c, type: 3}
       propertyPath: m_Name
-      value: lantern (13)
+      value: Normal_lantern (13)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -8490,6 +8706,41 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 927858234}
   m_CullTransparentMesh: 1
+--- !u!1 &928721857
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 928721858}
+  m_Layer: 0
+  m_Name: Demos
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &928721858
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 928721857}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -20.54, y: 1.5037, z: -13.41}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1101312198}
+  - {fileID: 1368109078}
+  - {fileID: 1636602792}
+  - {fileID: 1060843744}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &931936423 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 40ec9cfcdc5c1924b8046ce9b97525b6, type: 3}
@@ -8867,7 +9118,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3654786394008814729, guid: e1faae3d6564f904d85a551a0c499036, type: 3}
       propertyPath: m_Name
-      value: wood_Square (3)
+      value: Fast_wood_Square (3)
       objectReference: {fileID: 0}
     - target: {fileID: 3654786394008814729, guid: e1faae3d6564f904d85a551a0c499036, type: 3}
       propertyPath: m_TagString
@@ -8933,7 +9184,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 1788217886}
+    m_TransformParent: {fileID: 1431498221}
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 40ec9cfcdc5c1924b8046ce9b97525b6, type: 3}
       propertyPath: m_LocalScale.x
@@ -8994,6 +9245,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 40ec9cfcdc5c1924b8046ce9b97525b6, type: 3}
       propertyPath: m_Name
       value: fences_horizontal_part_04 (19)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 40ec9cfcdc5c1924b8046ce9b97525b6, type: 3}
+      propertyPath: m_TagString
+      value: Floor_Normal
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -9219,7 +9474,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 1788217886}
+    m_TransformParent: {fileID: 324234636}
     m_Modifications:
     - target: {fileID: 3654786394008814729, guid: e1faae3d6564f904d85a551a0c499036, type: 3}
       propertyPath: m_Name
@@ -9349,7 +9604,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 1788217886}
+    m_TransformParent: {fileID: 1084493610}
     m_Modifications:
     - target: {fileID: 171646002528836469, guid: a212788762a17574cb637c773eafe4b2, type: 3}
       propertyPath: m_LocalScale.x
@@ -9361,7 +9616,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 171646002528836469, guid: a212788762a17574cb637c773eafe4b2, type: 3}
       propertyPath: m_LocalScale.z
-      value: 73.78989
+      value: 73.789894
       objectReference: {fileID: 0}
     - target: {fileID: 171646002528836469, guid: a212788762a17574cb637c773eafe4b2, type: 3}
       propertyPath: m_LocalPosition.x
@@ -9406,6 +9661,10 @@ PrefabInstance:
     - target: {fileID: 660374988589138383, guid: a212788762a17574cb637c773eafe4b2, type: 3}
       propertyPath: m_Name
       value: wood_Rect_Short (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 660374988589138383, guid: a212788762a17574cb637c773eafe4b2, type: 3}
+      propertyPath: m_TagString
+      value: Floor_Normal
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -9521,7 +9780,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2983592157584673976, guid: 776aaad933fbb9b438a5c9100f477056, type: 3}
       propertyPath: m_Name
-      value: wood_Cylinder (4)
+      value: Ice_wood_Cylinder (4)
       objectReference: {fileID: 0}
     - target: {fileID: 2983592157584673976, guid: 776aaad933fbb9b438a5c9100f477056, type: 3}
       propertyPath: m_TagString
@@ -9538,7 +9797,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 1788217886}
+    m_TransformParent: {fileID: 1436160186}
     m_Modifications:
     - target: {fileID: 314016817633540860, guid: e12b0f4d6d564b8418fb110d49fd841c, type: 3}
       propertyPath: m_LocalScale.x
@@ -9716,7 +9975,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 770795241465381364, guid: e07cd428c18dd15409a60fbd98a72feb, type: 3}
       propertyPath: m_Name
-      value: wood_Rect_Short Variant (5)
+      value: Ice_wood_Rect_Short Variant (5)
       objectReference: {fileID: 0}
     - target: {fileID: 770795241465381364, guid: e07cd428c18dd15409a60fbd98a72feb, type: 3}
       propertyPath: m_TagString
@@ -9829,12 +10088,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1060843740}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -20.54, y: 1.5037, z: -13.41}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 2.7868223, y: 2.8074143, z: 2.7868223}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 928721858}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 3.92}
 --- !u!1001 &1061394637
 PrefabInstance:
@@ -9842,7 +10101,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 1788217886}
+    m_TransformParent: {fileID: 1431498221}
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 40ec9cfcdc5c1924b8046ce9b97525b6, type: 3}
       propertyPath: m_LocalScale.x
@@ -9904,6 +10163,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: fences_horizontal_part_04 (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 40ec9cfcdc5c1924b8046ce9b97525b6, type: 3}
+      propertyPath: m_TagString
+      value: Floor_Normal
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9922,7 +10185,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1310446801028429225, guid: 73eeb30db602a1b47b2f1e1f8048213a, type: 3}
       propertyPath: m_Name
-      value: wood_Box 01 (3)
+      value: Normal_wood_Box 01 (3)
       objectReference: {fileID: 0}
     - target: {fileID: 1310446801028429225, guid: 73eeb30db602a1b47b2f1e1f8048213a, type: 3}
       propertyPath: m_Layer
@@ -10009,11 +10272,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3654786394008814729, guid: e1faae3d6564f904d85a551a0c499036, type: 3}
       propertyPath: m_Name
-      value: wood_Square (12)
+      value: Dark_Normal_wood_Square (12)
       objectReference: {fileID: 0}
     - target: {fileID: 3654786394008814729, guid: e1faae3d6564f904d85a551a0c499036, type: 3}
       propertyPath: m_TagString
-      value: Floor_Fast
+      value: Trigger_Dark
       objectReference: {fileID: 0}
     - target: {fileID: 4175884070986964531, guid: e1faae3d6564f904d85a551a0c499036, type: 3}
       propertyPath: m_LocalScale.x
@@ -10077,6 +10340,40 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4202130902894980, guid: 6910e2407cd484a42a0c2598114751a0, type: 3}
   m_PrefabInstance: {fileID: 208657652}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1084493609
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1084493610}
+  m_Layer: 0
+  m_Name: Normal_lantern_wood
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1084493610
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1084493609}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1075867156}
+  - {fileID: 1699126596}
+  - {fileID: 430428975}
+  m_Father: {fileID: 1788217886}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1087398699 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2462354017993987586, guid: 776aaad933fbb9b438a5c9100f477056, type: 3}
@@ -10302,12 +10599,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1101312194}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -16.93, y: 0.476, z: -15.68}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 3.6100006, y: -1.0277, z: -2.2700005}
   m_LocalScale: {x: 2.7868223, y: 0.75210804, z: 2.7868223}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 928721858}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &1101312199
 BoxCollider:
@@ -10371,7 +10668,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3654786394008814729, guid: e1faae3d6564f904d85a551a0c499036, type: 3}
       propertyPath: m_Name
-      value: wood_Square (6)
+      value: Normal_wood_Square (6)
       objectReference: {fileID: 0}
     - target: {fileID: 3654786394008814729, guid: e1faae3d6564f904d85a551a0c499036, type: 3}
       propertyPath: m_TagString
@@ -10440,7 +10737,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 1788217886}
+    m_TransformParent: {fileID: 1436160186}
     m_Modifications:
     - target: {fileID: 314016817633540860, guid: e12b0f4d6d564b8418fb110d49fd841c, type: 3}
       propertyPath: m_LocalScale.x
@@ -10504,6 +10801,37 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 40ec9cfcdc5c1924b8046ce9b97525b6, type: 3}
   m_PrefabInstance: {fileID: 1843277386}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1124430549
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1124430550}
+  m_Layer: 0
+  m_Name: ResetTriggers
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1124430550
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1124430549}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1788217886}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1124577621
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10514,7 +10842,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3654786394008814729, guid: e1faae3d6564f904d85a551a0c499036, type: 3}
       propertyPath: m_Name
-      value: wood_Square (26)
+      value: Normal_wood_Square (26)
       objectReference: {fileID: 0}
     - target: {fileID: 3654786394008814729, guid: e1faae3d6564f904d85a551a0c499036, type: 3}
       propertyPath: m_TagString
@@ -10734,7 +11062,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 770795241465381364, guid: e07cd428c18dd15409a60fbd98a72feb, type: 3}
       propertyPath: m_Name
-      value: wood_Rect_Short Variant (4)
+      value: Ice_wood_Rect_Short Variant (4)
       objectReference: {fileID: 0}
     - target: {fileID: 770795241465381364, guid: e07cd428c18dd15409a60fbd98a72feb, type: 3}
       propertyPath: m_TagString
@@ -10811,7 +11139,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2983592157584673976, guid: 776aaad933fbb9b438a5c9100f477056, type: 3}
       propertyPath: m_Name
-      value: wood_Cylinder (11)
+      value: Fast_wood_Cylinder (11)
       objectReference: {fileID: 0}
     - target: {fileID: 2983592157584673976, guid: 776aaad933fbb9b438a5c9100f477056, type: 3}
       propertyPath: m_TagString
@@ -10832,7 +11160,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 1788217886}
+    m_TransformParent: {fileID: 324234636}
     m_Modifications:
     - target: {fileID: 3654786394008814729, guid: e1faae3d6564f904d85a551a0c499036, type: 3}
       propertyPath: m_Name
@@ -10840,11 +11168,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3654786394008814729, guid: e1faae3d6564f904d85a551a0c499036, type: 3}
       propertyPath: m_TagString
-      value: Floor_Fast
+      value: Floor_Normal
       objectReference: {fileID: 0}
     - target: {fileID: 4175884070986964531, guid: e1faae3d6564f904d85a551a0c499036, type: 3}
       propertyPath: m_LocalScale.x
-      value: 985.5047
+      value: 985.50476
       objectReference: {fileID: 0}
     - target: {fileID: 4175884070986964531, guid: e1faae3d6564f904d85a551a0c499036, type: 3}
       propertyPath: m_LocalScale.y
@@ -11004,7 +11332,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 1788217886}
+    m_TransformParent: {fileID: 1431498221}
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 40ec9cfcdc5c1924b8046ce9b97525b6, type: 3}
       propertyPath: m_LocalScale.x
@@ -11066,6 +11394,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: fences_horizontal_part_04 (21)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 40ec9cfcdc5c1924b8046ce9b97525b6, type: 3}
+      propertyPath: m_TagString
+      value: Floor_Normal
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -11084,7 +11416,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1310446801028429225, guid: 73eeb30db602a1b47b2f1e1f8048213a, type: 3}
       propertyPath: m_Name
-      value: wood_Box 01 (2)
+      value: Normal_wood_Box 01 (2)
       objectReference: {fileID: 0}
     - target: {fileID: 1310446801028429225, guid: 73eeb30db602a1b47b2f1e1f8048213a, type: 3}
       propertyPath: m_Layer
@@ -11213,7 +11545,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 770795241465381364, guid: e07cd428c18dd15409a60fbd98a72feb, type: 3}
       propertyPath: m_Name
-      value: wood_Rect_Short Variant (3)
+      value: Ice_wood_Rect_Short Variant (3)
       objectReference: {fileID: 0}
     - target: {fileID: 770795241465381364, guid: e07cd428c18dd15409a60fbd98a72feb, type: 3}
       propertyPath: m_TagString
@@ -11222,12 +11554,45 @@ PrefabInstance:
     - target: {fileID: 1275246846200291361, guid: e07cd428c18dd15409a60fbd98a72feb, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 84498b92bb6b900469276ab7377a1cf0, type: 2}
+      objectReference: {fileID: 2100000, guid: 21336316c1953c841ac00b019570ff43, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e07cd428c18dd15409a60fbd98a72feb, type: 3}
+--- !u!1 &1170133084
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1170133085}
+  m_Layer: 0
+  m_Name: Dark_wood_cylinder
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1170133085
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1170133084}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1467539298}
+  - {fileID: 2134955682}
+  m_Father: {fileID: 1788217886}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1170204183
 GameObject:
   m_ObjectHideFlags: 0
@@ -11326,7 +11691,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 1788217886}
+    m_TransformParent: {fileID: 1431498221}
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: fe29b2d556a49684ebbfa9c4e6d5735c, type: 3}
       propertyPath: m_LocalScale.x
@@ -11392,6 +11757,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: fe29b2d556a49684ebbfa9c4e6d5735c, type: 3}
+      propertyPath: m_TagString
+      value: Floor_Normal
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -11415,7 +11784,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3654786394008814729, guid: e1faae3d6564f904d85a551a0c499036, type: 3}
       propertyPath: m_Name
-      value: wood_Square
+      value: Normal_wood_Square
       objectReference: {fileID: 0}
     - target: {fileID: 3654786394008814729, guid: e1faae3d6564f904d85a551a0c499036, type: 3}
       propertyPath: m_TagString
@@ -11549,6 +11918,39 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 22a3fd8d3e59a1149bdcd775c0e87241, type: 3}
+--- !u!1 &1209207957
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1209207958}
+  m_Layer: 0
+  m_Name: Normal_lantern_wood
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1209207958
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1209207957}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1296808318}
+  - {fileID: 24397917}
+  m_Father: {fileID: 1788217886}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1215205484
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11559,7 +11961,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3654786394008814729, guid: e1faae3d6564f904d85a551a0c499036, type: 3}
       propertyPath: m_Name
-      value: wood_Square (10)
+      value: Normal_wood_Square (10)
       objectReference: {fileID: 0}
     - target: {fileID: 3654786394008814729, guid: e1faae3d6564f904d85a551a0c499036, type: 3}
       propertyPath: m_TagString
@@ -11619,7 +12021,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 4175884070986964531, guid: e1faae3d6564f904d85a551a0c499036, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 577295393}
+    - targetCorrespondingSourceObject: {fileID: 4175884070986964531, guid: e1faae3d6564f904d85a551a0c499036, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 65276916}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e1faae3d6564f904d85a551a0c499036, type: 3}
 --- !u!1 &1215374211 stripped
@@ -11755,7 +12163,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 1788217886}
+    m_TransformParent: {fileID: 1431498221}
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: fe29b2d556a49684ebbfa9c4e6d5735c, type: 3}
       propertyPath: m_LocalScale.x
@@ -11821,6 +12229,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: fe29b2d556a49684ebbfa9c4e6d5735c, type: 3}
+      propertyPath: m_TagString
+      value: Floor_Normal
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -11879,7 +12291,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2159447657311926417, guid: 8547587fcb7ed0348b5a62f1329a9b6f, type: 3}
       propertyPath: m_Name
-      value: wood_Cylinder Variant
+      value: Normal_wood_Cylinder Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 2159447657311926417, guid: 8547587fcb7ed0348b5a62f1329a9b6f, type: 3}
+      propertyPath: m_TagString
+      value: Floor_Normal
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -12301,11 +12717,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3654786394008814729, guid: e1faae3d6564f904d85a551a0c499036, type: 3}
       propertyPath: m_Name
-      value: wood_Square (9)
+      value: Fast_wood_Square (9)
       objectReference: {fileID: 0}
     - target: {fileID: 3654786394008814729, guid: e1faae3d6564f904d85a551a0c499036, type: 3}
       propertyPath: m_TagString
-      value: Trigger_Dark
+      value: Floor_Fast
       objectReference: {fileID: 0}
     - target: {fileID: 4175884070986964531, guid: e1faae3d6564f904d85a551a0c499036, type: 3}
       propertyPath: m_LocalScale.x
@@ -12364,11 +12780,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e1faae3d6564f904d85a551a0c499036, type: 3}
---- !u!4 &1281046839 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 2346708107034121128, guid: 654b076cb2e53144299d4c8e14a11e25, type: 3}
-  m_PrefabInstance: {fileID: 1727315703}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1283164450 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4252784401376168, guid: 22a3fd8d3e59a1149bdcd775c0e87241, type: 3}
@@ -12380,7 +12791,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 1788217886}
+    m_TransformParent: {fileID: 324234636}
     m_Modifications:
     - target: {fileID: 3654786394008814729, guid: e1faae3d6564f904d85a551a0c499036, type: 3}
       propertyPath: m_Name
@@ -12510,7 +12921,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 1788217886}
+    m_TransformParent: {fileID: 1436160186}
     m_Modifications:
     - target: {fileID: 314016817633540860, guid: e12b0f4d6d564b8418fb110d49fd841c, type: 3}
       propertyPath: m_LocalScale.x
@@ -12585,7 +12996,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 1788217886}
+    m_TransformParent: {fileID: 1431498221}
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 40ec9cfcdc5c1924b8046ce9b97525b6, type: 3}
       propertyPath: m_LocalScale.x
@@ -12647,6 +13058,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: fences_horizontal_part_04 (20)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 40ec9cfcdc5c1924b8046ce9b97525b6, type: 3}
+      propertyPath: m_TagString
+      value: Floor_Normal
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -12696,7 +13111,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1310446801028429225, guid: 73eeb30db602a1b47b2f1e1f8048213a, type: 3}
       propertyPath: m_Name
-      value: wood_Box 01 (1)
+      value: Normal_wood_Box 01 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1310446801028429225, guid: 73eeb30db602a1b47b2f1e1f8048213a, type: 3}
+      propertyPath: m_TagString
+      value: Floor_Normal
       objectReference: {fileID: 0}
     - target: {fileID: 1829715719603416851, guid: 73eeb30db602a1b47b2f1e1f8048213a, type: 3}
       propertyPath: m_LocalScale.x
@@ -12823,7 +13242,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2983592157584673976, guid: 776aaad933fbb9b438a5c9100f477056, type: 3}
       propertyPath: m_Name
-      value: wood_Cylinder (9)
+      value: Fast_wood_Cylinder (9)
       objectReference: {fileID: 0}
     - target: {fileID: 2983592157584673976, guid: 776aaad933fbb9b438a5c9100f477056, type: 3}
       propertyPath: m_TagString
@@ -14406,7 +14825,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 1788217886}
+    m_TransformParent: {fileID: 1431498221}
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 40ec9cfcdc5c1924b8046ce9b97525b6, type: 3}
       propertyPath: m_LocalScale.x
@@ -14467,6 +14886,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 40ec9cfcdc5c1924b8046ce9b97525b6, type: 3}
       propertyPath: m_Name
       value: fences_horizontal_part_04 (14)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 40ec9cfcdc5c1924b8046ce9b97525b6, type: 3}
+      propertyPath: m_TagString
+      value: Floor_Normal
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -14560,12 +14983,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1368715451}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -16.93, y: 0.476, z: -19.37}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 3.6100006, y: -1.0277, z: -5.960001}
   m_LocalScale: {x: 2.7868223, y: 0.75210804, z: 2.7868223}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 928721858}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 3.92}
 --- !u!1 &1368715451
 GameObject:
@@ -14753,6 +15176,76 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.19923197, y: 1.3250129, z: 0.17206022}
   m_Center: {x: -0.010727226, y: 0.66250837, z: 0.004814997}
+--- !u!1 &1431498220
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1431498221}
+  m_Layer: 0
+  m_Name: fence
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1431498221
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1431498220}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1436160186}
+  - {fileID: 1531335640}
+  - {fileID: 300222453}
+  - {fileID: 1016999512}
+  - {fileID: 1033791372}
+  - {fileID: 1326493489}
+  - {fileID: 135571545}
+  - {fileID: 1744621473}
+  - {fileID: 1243028837}
+  - {fileID: 917384640}
+  - {fileID: 1319384172}
+  - {fileID: 1542378764}
+  - {fileID: 681217006}
+  - {fileID: 2002903667}
+  - {fileID: 108160441}
+  - {fileID: 1730315450}
+  - {fileID: 826131249}
+  - {fileID: 1040842098}
+  - {fileID: 1158976698}
+  - {fileID: 931936423}
+  - {fileID: 1470824979}
+  - {fileID: 882503662}
+  - {fileID: 191836335}
+  - {fileID: 914020263}
+  - {fileID: 2139327063}
+  - {fileID: 959504186}
+  - {fileID: 954251535}
+  - {fileID: 1445192307}
+  - {fileID: 348801023}
+  - {fileID: 236054556}
+  - {fileID: 810274005}
+  - {fileID: 940524698}
+  - {fileID: 1136340809}
+  - {fileID: 475289105}
+  - {fileID: 152054688}
+  - {fileID: 11496475}
+  - {fileID: 2070186649}
+  - {fileID: 1547255057}
+  - {fileID: 1123645922}
+  m_Father: {fileID: 1788217886}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1435001795 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 40ec9cfcdc5c1924b8046ce9b97525b6, type: 3}
@@ -14779,6 +15272,45 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 2.5938432, y: 0.29562983, z: 0.20217273}
   m_Center: {x: 0.006120741, y: 0.14508967, z: -0.0009513422}
+--- !u!1 &1436160185
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1436160186}
+  m_Layer: 0
+  m_Name: Lanterns
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1436160186
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1436160185}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 443947516}
+  - {fileID: 1955101431}
+  - {fileID: 1451312637}
+  - {fileID: 509907859}
+  - {fileID: 651889423}
+  - {fileID: 967217153}
+  - {fileID: 870613100}
+  - {fileID: 1980853023}
+  m_Father: {fileID: 1431498221}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1442782372
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14841,7 +15373,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7679985483975824869, guid: 3339231229befc046a5a1182f295fb5b, type: 3}
       propertyPath: m_Name
-      value: wood_Box 04
+      value: Normal_wood_Box 04
+      objectReference: {fileID: 0}
+    - target: {fileID: 7679985483975824869, guid: 3339231229befc046a5a1182f295fb5b, type: 3}
+      propertyPath: m_TagString
+      value: Floor_Normal
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -14854,31 +15390,35 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 1788217886}
+    m_TransformParent: {fileID: 959449415}
     m_Modifications:
     - target: {fileID: 142350045246348110, guid: e07cd428c18dd15409a60fbd98a72feb, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.14953148
+      objectReference: {fileID: 0}
+    - target: {fileID: 142350045246348110, guid: e07cd428c18dd15409a60fbd98a72feb, type: 3}
       propertyPath: m_LocalScale.y
-      value: 501.81464
+      value: 1.5235072
       objectReference: {fileID: 0}
     - target: {fileID: 142350045246348110, guid: e07cd428c18dd15409a60fbd98a72feb, type: 3}
       propertyPath: m_LocalScale.z
-      value: 169.2073
+      value: 0.63676226
       objectReference: {fileID: 0}
     - target: {fileID: 142350045246348110, guid: e07cd428c18dd15409a60fbd98a72feb, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 5.489
+      value: -0.00047444753
       objectReference: {fileID: 0}
     - target: {fileID: 142350045246348110, guid: e07cd428c18dd15409a60fbd98a72feb, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 45.32
+      value: 0.0073774713
       objectReference: {fileID: 0}
     - target: {fileID: 142350045246348110, guid: e07cd428c18dd15409a60fbd98a72feb, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 58.184998
+      value: -0.0038702828
       objectReference: {fileID: 0}
     - target: {fileID: 142350045246348110, guid: e07cd428c18dd15409a60fbd98a72feb, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.35020736
+      value: 0.70917016
       objectReference: {fileID: 0}
     - target: {fileID: 142350045246348110, guid: e07cd428c18dd15409a60fbd98a72feb, type: 3}
       propertyPath: m_LocalRotation.x
@@ -14886,7 +15426,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 142350045246348110, guid: e07cd428c18dd15409a60fbd98a72feb, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.9366722
+      value: 0.70503736
       objectReference: {fileID: 0}
     - target: {fileID: 142350045246348110, guid: e07cd428c18dd15409a60fbd98a72feb, type: 3}
       propertyPath: m_LocalRotation.z
@@ -15006,7 +15546,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 770795241465381364, guid: e07cd428c18dd15409a60fbd98a72feb, type: 3}
       propertyPath: m_Name
-      value: wood_Rect_Short (1)
+      value: Normal_wood_Rect_Short (1)
       objectReference: {fileID: 0}
     - target: {fileID: 770795241465381364, guid: e07cd428c18dd15409a60fbd98a72feb, type: 3}
       propertyPath: m_TagString
@@ -15183,7 +15723,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 1788217886}
+    m_TransformParent: {fileID: 1431498221}
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 40ec9cfcdc5c1924b8046ce9b97525b6, type: 3}
       propertyPath: m_LocalScale.x
@@ -15245,6 +15785,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: fences_horizontal_part_04 (11)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 40ec9cfcdc5c1924b8046ce9b97525b6, type: 3}
+      propertyPath: m_TagString
+      value: Floor_Normal
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -15253,6 +15797,39 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 1287971365}
   m_SourcePrefab: {fileID: 100100000, guid: 40ec9cfcdc5c1924b8046ce9b97525b6, type: 3}
+--- !u!1 &1466350403
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1466350404}
+  m_Layer: 0
+  m_Name: Dark_wood_cylinder
+  m_TagString: Trigger_Dark
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1466350404
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1466350403}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 763903486}
+  - {fileID: 2139629080}
+  m_Father: {fileID: 1788217886}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1467539298 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2462354017993987586, guid: 776aaad933fbb9b438a5c9100f477056, type: 3}
@@ -15288,7 +15865,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3654786394008814729, guid: e1faae3d6564f904d85a551a0c499036, type: 3}
       propertyPath: m_Name
-      value: wood_Square (2)
+      value: Normal_wood_Square (2)
       objectReference: {fileID: 0}
     - target: {fileID: 3654786394008814729, guid: e1faae3d6564f904d85a551a0c499036, type: 3}
       propertyPath: m_TagString
@@ -15349,31 +15926,35 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 1788217886}
+    m_TransformParent: {fileID: 959449415}
     m_Modifications:
     - target: {fileID: 142350045246348110, guid: e07cd428c18dd15409a60fbd98a72feb, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.14953148
+      objectReference: {fileID: 0}
+    - target: {fileID: 142350045246348110, guid: e07cd428c18dd15409a60fbd98a72feb, type: 3}
       propertyPath: m_LocalScale.y
-      value: 610.84546
+      value: 1.8545245
       objectReference: {fileID: 0}
     - target: {fileID: 142350045246348110, guid: e07cd428c18dd15409a60fbd98a72feb, type: 3}
       propertyPath: m_LocalScale.z
-      value: 169.2073
+      value: 0.63676226
       objectReference: {fileID: 0}
     - target: {fileID: 142350045246348110, guid: e07cd428c18dd15409a60fbd98a72feb, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 8.059
+      value: -0.0005662917
       objectReference: {fileID: 0}
     - target: {fileID: 142350045246348110, guid: e07cd428c18dd15409a60fbd98a72feb, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 46.43
+      value: 0.010747429
       objectReference: {fileID: 0}
     - target: {fileID: 142350045246348110, guid: e07cd428c18dd15409a60fbd98a72feb, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 60.425
+      value: 0.0022032007
       objectReference: {fileID: 0}
     - target: {fileID: 142350045246348110, guid: e07cd428c18dd15409a60fbd98a72feb, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.35020736
+      value: 0.70917016
       objectReference: {fileID: 0}
     - target: {fileID: 142350045246348110, guid: e07cd428c18dd15409a60fbd98a72feb, type: 3}
       propertyPath: m_LocalRotation.x
@@ -15381,7 +15962,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 142350045246348110, guid: e07cd428c18dd15409a60fbd98a72feb, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.9366722
+      value: 0.70503736
       objectReference: {fileID: 0}
     - target: {fileID: 142350045246348110, guid: e07cd428c18dd15409a60fbd98a72feb, type: 3}
       propertyPath: m_LocalRotation.z
@@ -15479,11 +16060,15 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 9def696716f9d5e4b944d9961f190c50, type: 2}
     - target: {fileID: 919132149155446097, guid: 380e85b57857ec448ac39c1b5b897578, type: 3}
       propertyPath: m_Name
-      value: wood_Box 02 (8)
+      value: Normal_wood_Box 02 (8)
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 380e85b57857ec448ac39c1b5b897578, type: 3}
       propertyPath: m_Layer
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 380e85b57857ec448ac39c1b5b897578, type: 3}
+      propertyPath: m_TagString
+      value: Floor_Normal
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -15625,7 +16210,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 1788217886}
+    m_TransformParent: {fileID: 1431498221}
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 40ec9cfcdc5c1924b8046ce9b97525b6, type: 3}
       propertyPath: m_LocalScale.x
@@ -15687,6 +16272,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: fences_horizontal_part_04 (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 40ec9cfcdc5c1924b8046ce9b97525b6, type: 3}
+      propertyPath: m_TagString
+      value: Floor_Normal
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -15701,19 +16290,19 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 1788217886}
+    m_TransformParent: {fileID: 31688693}
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 380e85b57857ec448ac39c1b5b897578, type: 3}
       propertyPath: m_LocalScale.x
-      value: 930.83154
+      value: 930.8314
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 380e85b57857ec448ac39c1b5b897578, type: 3}
       propertyPath: m_LocalScale.y
-      value: 930.8318
+      value: 930.8319
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 380e85b57857ec448ac39c1b5b897578, type: 3}
       propertyPath: m_LocalScale.z
-      value: 930.8316
+      value: 930.83154
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 380e85b57857ec448ac39c1b5b897578, type: 3}
       propertyPath: m_LocalPosition.x
@@ -15767,6 +16356,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 380e85b57857ec448ac39c1b5b897578, type: 3}
+      propertyPath: m_TagString
+      value: Floor_Normal
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -15781,7 +16374,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 1788217886}
+    m_TransformParent: {fileID: 1431498221}
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: fe29b2d556a49684ebbfa9c4e6d5735c, type: 3}
       propertyPath: m_LocalScale.x
@@ -15846,6 +16439,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: fe29b2d556a49684ebbfa9c4e6d5735c, type: 3}
       propertyPath: m_Layer
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: fe29b2d556a49684ebbfa9c4e6d5735c, type: 3}
+      propertyPath: m_TagString
+      value: Floor_Normal
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -16117,7 +16714,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 1788217886}
+    m_TransformParent: {fileID: 1084493610}
     m_Modifications:
     - target: {fileID: 2462354017993987586, guid: 776aaad933fbb9b438a5c9100f477056, type: 3}
       propertyPath: m_LocalScale.x
@@ -16174,6 +16771,10 @@ PrefabInstance:
     - target: {fileID: 2983592157584673976, guid: 776aaad933fbb9b438a5c9100f477056, type: 3}
       propertyPath: m_Name
       value: wood_Cylinder (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2983592157584673976, guid: 776aaad933fbb9b438a5c9100f477056, type: 3}
+      propertyPath: m_TagString
+      value: Floor_Normal
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -16291,11 +16892,11 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 1788217886}
+    m_TransformParent: {fileID: 130119819}
     m_Modifications:
     - target: {fileID: 171646002528836469, guid: a212788762a17574cb637c773eafe4b2, type: 3}
       propertyPath: m_LocalScale.x
-      value: 123.28724
+      value: 123.28723
       objectReference: {fileID: 0}
     - target: {fileID: 171646002528836469, guid: a212788762a17574cb637c773eafe4b2, type: 3}
       propertyPath: m_LocalScale.y
@@ -16737,7 +17338,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5235643922757554064, guid: 756d8208ad83ba647927bee1b78c487a, type: 3}
       propertyPath: m_Name
-      value: wood_Box 03
+      value: Normal_wood_Box 03
       objectReference: {fileID: 0}
     - target: {fileID: 5235643922757554064, guid: 756d8208ad83ba647927bee1b78c487a, type: 3}
       propertyPath: m_TagString
@@ -16880,12 +17481,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1636602788}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -16.93, y: 0.476, z: -22.94}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 3.6100006, y: -1.0277, z: -9.530001}
   m_LocalScale: {x: 2.7868223, y: 0.75210804, z: 2.7868223}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 928721858}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 3.92}
 --- !u!1 &1642400425
 GameObject:
@@ -17016,7 +17617,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1085451130495557702, guid: e12b0f4d6d564b8418fb110d49fd841c, type: 3}
       propertyPath: m_Name
-      value: lantern (16)
+      value: Normal_lantern (16)
       objectReference: {fileID: 0}
     - target: {fileID: 8319590841574605371, guid: e12b0f4d6d564b8418fb110d49fd841c, type: 3}
       propertyPath: m_Layer
@@ -17223,11 +17824,11 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 1788217886}
+    m_TransformParent: {fileID: 31688693}
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 380e85b57857ec448ac39c1b5b897578, type: 3}
       propertyPath: m_LocalScale.x
-      value: 618.9864
+      value: 618.98645
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 380e85b57857ec448ac39c1b5b897578, type: 3}
       propertyPath: m_LocalScale.y
@@ -17288,6 +17889,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 380e85b57857ec448ac39c1b5b897578, type: 3}
       propertyPath: m_Layer
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 380e85b57857ec448ac39c1b5b897578, type: 3}
+      propertyPath: m_TagString
+      value: Floor_Normal
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -17360,15 +17965,15 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 1788217886}
+    m_TransformParent: {fileID: 1209207958}
     m_Modifications:
     - target: {fileID: 171646002528836469, guid: a212788762a17574cb637c773eafe4b2, type: 3}
       propertyPath: m_LocalScale.x
-      value: 123.287254
+      value: 123.28726
       objectReference: {fileID: 0}
     - target: {fileID: 171646002528836469, guid: a212788762a17574cb637c773eafe4b2, type: 3}
       propertyPath: m_LocalScale.y
-      value: 16.366383
+      value: 16.36638
       objectReference: {fileID: 0}
     - target: {fileID: 171646002528836469, guid: a212788762a17574cb637c773eafe4b2, type: 3}
       propertyPath: m_LocalScale.z
@@ -17388,7 +17993,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 171646002528836469, guid: a212788762a17574cb637c773eafe4b2, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.9849983
+      value: 0.98499835
       objectReference: {fileID: 0}
     - target: {fileID: 171646002528836469, guid: a212788762a17574cb637c773eafe4b2, type: 3}
       propertyPath: m_LocalRotation.x
@@ -17396,7 +18001,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 171646002528836469, guid: a212788762a17574cb637c773eafe4b2, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.08282761
+      value: 0.08282762
       objectReference: {fileID: 0}
     - target: {fileID: 171646002528836469, guid: a212788762a17574cb637c773eafe4b2, type: 3}
       propertyPath: m_LocalRotation.z
@@ -17429,7 +18034,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 1788217886}
+    m_TransformParent: {fileID: 1431498221}
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 40ec9cfcdc5c1924b8046ce9b97525b6, type: 3}
       propertyPath: m_LocalScale.x
@@ -17491,6 +18096,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: fences_horizontal_part_04 (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 40ec9cfcdc5c1924b8046ce9b97525b6, type: 3}
+      propertyPath: m_TagString
+      value: Floor_Normal
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -17531,7 +18140,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 1788217886}
+    m_TransformParent: {fileID: 1431498221}
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: fe29b2d556a49684ebbfa9c4e6d5735c, type: 3}
       propertyPath: m_LocalScale.x
@@ -17596,6 +18205,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: fe29b2d556a49684ebbfa9c4e6d5735c, type: 3}
       propertyPath: m_Layer
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: fe29b2d556a49684ebbfa9c4e6d5735c, type: 3}
+      propertyPath: m_TagString
+      value: Floor_Normal
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -17700,7 +18313,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1085451130495557702, guid: e12b0f4d6d564b8418fb110d49fd841c, type: 3}
       propertyPath: m_Name
-      value: lantern (2)
+      value: Normal_lantern (2)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -17734,75 +18347,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -8794855478868679617, guid: 9dc4b88754cb6534e8e22097b7e84e48, type: 3}
---- !u!1001 &1727315703
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 1788217886}
-    m_Modifications:
-    - target: {fileID: 2346708107034121128, guid: 654b076cb2e53144299d4c8e14a11e25, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 12.806688
-      objectReference: {fileID: 0}
-    - target: {fileID: 2346708107034121128, guid: 654b076cb2e53144299d4c8e14a11e25, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 12.806688
-      objectReference: {fileID: 0}
-    - target: {fileID: 2346708107034121128, guid: 654b076cb2e53144299d4c8e14a11e25, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 12.806688
-      objectReference: {fileID: 0}
-    - target: {fileID: 2346708107034121128, guid: 654b076cb2e53144299d4c8e14a11e25, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 23.638577
-      objectReference: {fileID: 0}
-    - target: {fileID: 2346708107034121128, guid: 654b076cb2e53144299d4c8e14a11e25, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.112360284
-      objectReference: {fileID: 0}
-    - target: {fileID: 2346708107034121128, guid: 654b076cb2e53144299d4c8e14a11e25, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 61.52202
-      objectReference: {fileID: 0}
-    - target: {fileID: 2346708107034121128, guid: 654b076cb2e53144299d4c8e14a11e25, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2346708107034121128, guid: 654b076cb2e53144299d4c8e14a11e25, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2346708107034121128, guid: 654b076cb2e53144299d4c8e14a11e25, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2346708107034121128, guid: 654b076cb2e53144299d4c8e14a11e25, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2346708107034121128, guid: 654b076cb2e53144299d4c8e14a11e25, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2346708107034121128, guid: 654b076cb2e53144299d4c8e14a11e25, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2346708107034121128, guid: 654b076cb2e53144299d4c8e14a11e25, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3160117620560890130, guid: 654b076cb2e53144299d4c8e14a11e25, type: 3}
-      propertyPath: m_Name
-      value: wood_Rect_Long
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 654b076cb2e53144299d4c8e14a11e25, type: 3}
 --- !u!4 &1730315450 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: fe29b2d556a49684ebbfa9c4e6d5735c, type: 3}
@@ -17818,7 +18362,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3654786394008814729, guid: e1faae3d6564f904d85a551a0c499036, type: 3}
       propertyPath: m_Name
-      value: wood_Square (4)
+      value: Fast_wood_Square (4)
       objectReference: {fileID: 0}
     - target: {fileID: 3654786394008814729, guid: e1faae3d6564f904d85a551a0c499036, type: 3}
       propertyPath: m_TagString
@@ -18041,7 +18585,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3654786394008814729, guid: e1faae3d6564f904d85a551a0c499036, type: 3}
       propertyPath: m_Name
-      value: wood_Square (19)
+      value: Normal_wood_Square (19)
       objectReference: {fileID: 0}
     - target: {fileID: 3654786394008814729, guid: e1faae3d6564f904d85a551a0c499036, type: 3}
       propertyPath: m_TagString
@@ -18490,7 +19034,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1085451130495557702, guid: e12b0f4d6d564b8418fb110d49fd841c, type: 3}
       propertyPath: m_Name
-      value: lantern (14)
+      value: Normal_lantern (14)
       objectReference: {fileID: 0}
     - target: {fileID: 7207233809707238320, guid: e12b0f4d6d564b8418fb110d49fd841c, type: 3}
       propertyPath: m_TagString
@@ -18517,60 +19061,42 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 1124430550}
   - {fileID: 917224630}
   - {fileID: 582432517}
   - {fileID: 845539975}
   - {fileID: 1604158920}
-  - {fileID: 608160996}
-  - {fileID: 1301887592}
   - {fileID: 861653465}
+  - {fileID: 753956833}
   - {fileID: 1043905579}
+  - {fileID: 67607204}
+  - {fileID: 456137373}
+  - {fileID: 572210228}
+  - {fileID: 1466350404}
+  - {fileID: 130119819}
+  - {fileID: 1170133085}
+  - {fileID: 163706932}
+  - {fileID: 1908891184}
+  - {fileID: 245602309}
+  - {fileID: 973190326}
+  - {fileID: 1084493610}
+  - {fileID: 1209207958}
+  - {fileID: 605016653}
+  - {fileID: 959449415}
   - {fileID: 889948299}
+  - {fileID: 2086176401}
+  - {fileID: 1431498221}
+  - {fileID: 577991345}
   - {fileID: 2016465303}
   - {fileID: 427691123}
   - {fileID: 430459226}
-  - {fileID: 1472939197}
-  - {fileID: 1294516767}
-  - {fileID: 1953964070}
-  - {fileID: 1862802316}
-  - {fileID: 1770946293}
-  - {fileID: 577991345}
-  - {fileID: 456137373}
-  - {fileID: 163706932}
-  - {fileID: 1908891184}
-  - {fileID: 959449415}
-  - {fileID: 245602309}
-  - {fileID: 919197414}
-  - {fileID: 1522683834}
-  - {fileID: 973190326}
-  - {fileID: 67607204}
-  - {fileID: 763903486}
-  - {fileID: 1016825631}
-  - {fileID: 2139629080}
-  - {fileID: 101049456}
-  - {fileID: 1467539298}
-  - {fileID: 1075867156}
-  - {fileID: 2134955682}
-  - {fileID: 1699126596}
-  - {fileID: 430428975}
-  - {fileID: 1296808318}
-  - {fileID: 24397917}
-  - {fileID: 605016653}
-  - {fileID: 443947516}
-  - {fileID: 1955101431}
-  - {fileID: 1451312637}
-  - {fileID: 509907859}
-  - {fileID: 651889423}
-  - {fileID: 967217153}
-  - {fileID: 870613100}
-  - {fileID: 1980853023}
-  - {fileID: 577295393}
-  - {fileID: 65276916}
-  - {fileID: 1281046839}
+  - {fileID: 324234636}
   - {fileID: 719310432}
   - {fileID: 1929013992}
   - {fileID: 157860632}
   - {fileID: 1512540328}
+  - {fileID: 608160996}
+  - {fileID: 1301887592}
   - {fileID: 1522550692}
   - {fileID: 1382363536}
   - {fileID: 528059580}
@@ -18583,70 +19109,30 @@ Transform:
   - {fileID: 43161608}
   - {fileID: 1445354763}
   - {fileID: 41141940}
+  - {fileID: 919197414}
+  - {fileID: 1522683834}
   - {fileID: 1087398699}
   - {fileID: 798978028}
   - {fileID: 1074954855}
+  - {fileID: 1472939197}
+  - {fileID: 31688693}
+  - {fileID: 1448205931}
+  - {fileID: 1761355770}
+  - {fileID: 479790754}
+  - {fileID: 927707491}
   - {fileID: 2026325189}
   - {fileID: 187470217}
   - {fileID: 417261474}
-  - {fileID: 1389188130}
-  - {fileID: 180303105}
-  - {fileID: 1288236162}
-  - {fileID: 652435640}
-  - {fileID: 2089881798}
-  - {fileID: 2029542056}
-  - {fileID: 927707491}
-  - {fileID: 1761355770}
-  - {fileID: 1448205931}
-  - {fileID: 479790754}
   - {fileID: 1053140104}
+  - {fileID: 1389188130}
   - {fileID: 261666861}
   - {fileID: 1362178947}
-  - {fileID: 753956833}
   - {fileID: 664102839}
   - {fileID: 738259582}
   - {fileID: 216738755}
   - {fileID: 1878026049}
   - {fileID: 441852622}
   - {fileID: 143929032}
-  - {fileID: 1531335640}
-  - {fileID: 300222453}
-  - {fileID: 1016999512}
-  - {fileID: 1033791372}
-  - {fileID: 1326493489}
-  - {fileID: 135571545}
-  - {fileID: 1744621473}
-  - {fileID: 1243028837}
-  - {fileID: 917384640}
-  - {fileID: 1319384172}
-  - {fileID: 1542378764}
-  - {fileID: 681217006}
-  - {fileID: 2002903667}
-  - {fileID: 108160441}
-  - {fileID: 1730315450}
-  - {fileID: 826131249}
-  - {fileID: 1040842098}
-  - {fileID: 1158976698}
-  - {fileID: 931936423}
-  - {fileID: 1470824979}
-  - {fileID: 882503662}
-  - {fileID: 191836335}
-  - {fileID: 914020263}
-  - {fileID: 2139327063}
-  - {fileID: 959504186}
-  - {fileID: 954251535}
-  - {fileID: 1445192307}
-  - {fileID: 348801023}
-  - {fileID: 236054556}
-  - {fileID: 810274005}
-  - {fileID: 940524698}
-  - {fileID: 1136340809}
-  - {fileID: 475289105}
-  - {fileID: 152054688}
-  - {fileID: 11496475}
-  - {fileID: 2070186649}
-  - {fileID: 1547255057}
-  - {fileID: 1123645922}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1792823134
@@ -18655,7 +19141,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 1788217886}
+    m_TransformParent: {fileID: 1436160186}
     m_Modifications:
     - target: {fileID: 314016817633540860, guid: e12b0f4d6d564b8418fb110d49fd841c, type: 3}
       propertyPath: m_LocalScale.x
@@ -18821,7 +19307,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 1788217886}
+    m_TransformParent: {fileID: 1431498221}
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 40ec9cfcdc5c1924b8046ce9b97525b6, type: 3}
       propertyPath: m_LocalScale.x
@@ -18883,6 +19369,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: fences_horizontal_part_04 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 40ec9cfcdc5c1924b8046ce9b97525b6, type: 3}
+      propertyPath: m_TagString
+      value: Floor_Normal
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -18906,7 +19396,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3654786394008814729, guid: e1faae3d6564f904d85a551a0c499036, type: 3}
       propertyPath: m_Name
-      value: wood_Square (21)
+      value: Fast_wood_Square (21)
       objectReference: {fileID: 0}
     - target: {fileID: 3654786394008814729, guid: e1faae3d6564f904d85a551a0c499036, type: 3}
       propertyPath: m_TagString
@@ -18975,7 +19465,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 1788217886}
+    m_TransformParent: {fileID: 1431498221}
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 40ec9cfcdc5c1924b8046ce9b97525b6, type: 3}
       propertyPath: m_LocalScale.x
@@ -19036,6 +19526,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 40ec9cfcdc5c1924b8046ce9b97525b6, type: 3}
       propertyPath: m_Name
       value: fences_horizontal_part_04 (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 40ec9cfcdc5c1924b8046ce9b97525b6, type: 3}
+      propertyPath: m_TagString
+      value: Floor_Normal
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -19527,11 +20021,15 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 9def696716f9d5e4b944d9961f190c50, type: 2}
     - target: {fileID: 919132149155446097, guid: 380e85b57857ec448ac39c1b5b897578, type: 3}
       propertyPath: m_Name
-      value: wood_Box 02 (7)
+      value: Normal_wood_Box 02 (7)
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 380e85b57857ec448ac39c1b5b897578, type: 3}
       propertyPath: m_Layer
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 380e85b57857ec448ac39c1b5b897578, type: 3}
+      propertyPath: m_TagString
+      value: Floor_Normal
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -19764,7 +20262,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3654786394008814729, guid: e1faae3d6564f904d85a551a0c499036, type: 3}
       propertyPath: m_Name
-      value: wood_Square (20)
+      value: Revert_wood_Square (20)
       objectReference: {fileID: 0}
     - target: {fileID: 3654786394008814729, guid: e1faae3d6564f904d85a551a0c499036, type: 3}
       propertyPath: m_TagString
@@ -19784,7 +20282,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4175884070986964531, guid: e1faae3d6564f904d85a551a0c499036, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 9.1189995
+      value: 9.118992
       objectReference: {fileID: 0}
     - target: {fileID: 4175884070986964531, guid: e1faae3d6564f904d85a551a0c499036, type: 3}
       propertyPath: m_LocalPosition.y
@@ -19792,7 +20290,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4175884070986964531, guid: e1faae3d6564f904d85a551a0c499036, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 68.75
+      value: 68.75003
       objectReference: {fileID: 0}
     - target: {fileID: 4175884070986964531, guid: e1faae3d6564f904d85a551a0c499036, type: 3}
       propertyPath: m_LocalRotation.w
@@ -20102,7 +20600,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 1788217886}
+    m_TransformParent: {fileID: 31688693}
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 380e85b57857ec448ac39c1b5b897578, type: 3}
       propertyPath: m_LocalScale.x
@@ -20167,6 +20665,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 380e85b57857ec448ac39c1b5b897578, type: 3}
       propertyPath: m_Layer
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 380e85b57857ec448ac39c1b5b897578, type: 3}
+      propertyPath: m_TagString
+      value: Floor_Normal
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -20234,7 +20736,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 770795241465381364, guid: e07cd428c18dd15409a60fbd98a72feb, type: 3}
       propertyPath: m_Name
-      value: wood_Rect_Short Variant (2)
+      value: Ice_wood_Rect_Short Variant (2)
       objectReference: {fileID: 0}
     - target: {fileID: 770795241465381364, guid: e07cd428c18dd15409a60fbd98a72feb, type: 3}
       propertyPath: m_TagString
@@ -20315,11 +20817,15 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 9def696716f9d5e4b944d9961f190c50, type: 2}
     - target: {fileID: 919132149155446097, guid: 380e85b57857ec448ac39c1b5b897578, type: 3}
       propertyPath: m_Name
-      value: wood_Box 02 (9)
+      value: Normal_wood_Box 02 (9)
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 380e85b57857ec448ac39c1b5b897578, type: 3}
       propertyPath: m_Layer
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 380e85b57857ec448ac39c1b5b897578, type: 3}
+      propertyPath: m_TagString
+      value: Floor_Normal
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -20560,7 +21066,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3654786394008814729, guid: e1faae3d6564f904d85a551a0c499036, type: 3}
       propertyPath: m_Name
-      value: wood_Square (25)
+      value: Fast_wood_Square (25)
       objectReference: {fileID: 0}
     - target: {fileID: 3654786394008814729, guid: e1faae3d6564f904d85a551a0c499036, type: 3}
       propertyPath: m_TagString
@@ -20819,7 +21325,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 1788217886}
+    m_TransformParent: {fileID: 1431498221}
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: fe29b2d556a49684ebbfa9c4e6d5735c, type: 3}
       propertyPath: m_LocalScale.x
@@ -20884,6 +21390,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: fe29b2d556a49684ebbfa9c4e6d5735c, type: 3}
       propertyPath: m_Layer
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: fe29b2d556a49684ebbfa9c4e6d5735c, type: 3}
+      propertyPath: m_TagString
+      value: Floor_Normal
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -20955,7 +21465,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2983592157584673976, guid: 776aaad933fbb9b438a5c9100f477056, type: 3}
       propertyPath: m_Name
-      value: wood_Cylinder (8)
+      value: Fast_wood_Cylinder (8)
       objectReference: {fileID: 0}
     - target: {fileID: 2983592157584673976, guid: 776aaad933fbb9b438a5c9100f477056, type: 3}
       propertyPath: m_TagString
@@ -21291,11 +21801,11 @@ Transform:
   m_GameObject: {fileID: 2086176397}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.4121246, z: -0, w: 0.91112757}
-  m_LocalPosition: {x: 22.4, y: 56.47, z: 91.26}
+  m_LocalPosition: {x: 22.409, y: 56.31, z: 102.825005}
   m_LocalScale: {x: 82.49179, y: 30.051485, z: 25.189507}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1788217886}
   m_LocalEulerAnglesHint: {x: 0, y: 48.677, z: 0}
 --- !u!1001 &2088232283
 PrefabInstance:
@@ -21359,7 +21869,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2983592157584673976, guid: 776aaad933fbb9b438a5c9100f477056, type: 3}
       propertyPath: m_Name
-      value: wood_Cylinder (10)
+      value: Fast_wood_Cylinder (10)
       objectReference: {fileID: 0}
     - target: {fileID: 2983592157584673976, guid: 776aaad933fbb9b438a5c9100f477056, type: 3}
       propertyPath: m_TagString
@@ -21437,7 +21947,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 1788217886}
+    m_TransformParent: {fileID: 1431498221}
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 40ec9cfcdc5c1924b8046ce9b97525b6, type: 3}
       propertyPath: m_LocalScale.x
@@ -21499,6 +22009,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: fences_horizontal_part_04 (13)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 40ec9cfcdc5c1924b8046ce9b97525b6, type: 3}
+      propertyPath: m_TagString
+      value: Floor_Normal
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -21513,7 +22027,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 1788217886}
+    m_TransformParent: {fileID: 1431498221}
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: fe29b2d556a49684ebbfa9c4e6d5735c, type: 3}
       propertyPath: m_LocalScale.x
@@ -21579,6 +22093,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: fe29b2d556a49684ebbfa9c4e6d5735c, type: 3}
+      propertyPath: m_TagString
+      value: Floor_Normal
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -21642,7 +22160,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2159447657311926417, guid: 8547587fcb7ed0348b5a62f1329a9b6f, type: 3}
       propertyPath: m_Name
-      value: wood_Cylinder Variant (2)
+      value: Normal_wood_Cylinder Variant (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2159447657311926417, guid: 8547587fcb7ed0348b5a62f1329a9b6f, type: 3}
+      propertyPath: m_TagString
+      value: Floor_Normal
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -21659,7 +22181,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3654786394008814729, guid: e1faae3d6564f904d85a551a0c499036, type: 3}
       propertyPath: m_Name
-      value: wood_Square (18)
+      value: Ice_wood_Square (18)
       objectReference: {fileID: 0}
     - target: {fileID: 3654786394008814729, guid: e1faae3d6564f904d85a551a0c499036, type: 3}
       propertyPath: m_TagString
@@ -21720,7 +22242,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 1788217886}
+    m_TransformParent: {fileID: 1431498221}
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 40ec9cfcdc5c1924b8046ce9b97525b6, type: 3}
       propertyPath: m_LocalScale.x
@@ -21782,6 +22304,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: fences_horizontal_part_04 (18)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 40ec9cfcdc5c1924b8046ce9b97525b6, type: 3}
+      propertyPath: m_TagString
+      value: Floor_Normal
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -21796,7 +22322,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 1788217886}
+    m_TransformParent: {fileID: 1436160186}
     m_Modifications:
     - target: {fileID: 314016817633540860, guid: e12b0f4d6d564b8418fb110d49fd841c, type: 3}
       propertyPath: m_LocalScale.x
@@ -21891,7 +22417,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3654786394008814729, guid: e1faae3d6564f904d85a551a0c499036, type: 3}
       propertyPath: m_Name
-      value: wood_Square (23)
+      value: Normal_wood_Square (23)
       objectReference: {fileID: 0}
     - target: {fileID: 3654786394008814729, guid: e1faae3d6564f904d85a551a0c499036, type: 3}
       propertyPath: m_TagString
@@ -21969,7 +22495,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3654786394008814729, guid: e1faae3d6564f904d85a551a0c499036, type: 3}
       propertyPath: m_Name
-      value: wood_Square (27)
+      value: Normal_wood_Square (27)
       objectReference: {fileID: 0}
     - target: {fileID: 3654786394008814729, guid: e1faae3d6564f904d85a551a0c499036, type: 3}
       propertyPath: m_TagString
@@ -22173,11 +22699,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1310446801028429225, guid: 73eeb30db602a1b47b2f1e1f8048213a, type: 3}
       propertyPath: m_Name
-      value: wood_Box 01
+      value: Normal_wood_Box 01
       objectReference: {fileID: 0}
     - target: {fileID: 1310446801028429225, guid: 73eeb30db602a1b47b2f1e1f8048213a, type: 3}
       propertyPath: m_Layer
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1310446801028429225, guid: 73eeb30db602a1b47b2f1e1f8048213a, type: 3}
+      propertyPath: m_TagString
+      value: Floor_Normal
       objectReference: {fileID: 0}
     - target: {fileID: 1829715719603416851, guid: 73eeb30db602a1b47b2f1e1f8048213a, type: 3}
       propertyPath: m_LocalScale.x
@@ -22295,7 +22825,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 1788217886}
+    m_TransformParent: {fileID: 31688693}
     m_Modifications:
     - target: {fileID: 3565893331492835078, guid: 12137f0fa61478a42ae6513d4e11f36f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -22344,6 +22874,10 @@ PrefabInstance:
     - target: {fileID: 4194902645562987964, guid: 12137f0fa61478a42ae6513d4e11f36f, type: 3}
       propertyPath: m_Layer
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4194902645562987964, guid: 12137f0fa61478a42ae6513d4e11f36f, type: 3}
+      propertyPath: m_TagString
+      value: Floor_Normal
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -22408,7 +22942,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 770795241465381364, guid: e07cd428c18dd15409a60fbd98a72feb, type: 3}
       propertyPath: m_Name
-      value: wood_Rect_Short
+      value: Normal_wood_Rect_Short
+      objectReference: {fileID: 0}
+    - target: {fileID: 770795241465381364, guid: e07cd428c18dd15409a60fbd98a72feb, type: 3}
+      propertyPath: m_TagString
+      value: Floor_Normal
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -22472,37 +23010,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d0b9ccc0cfde7fc4bb11495236725bcf, type: 3}
---- !u!1 &6269482719409261983
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 6650266323020846885}
-  m_Layer: 6
-  m_Name: DarkTrigger
-  m_TagString: Trigger_Dark
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &6650266323020846885
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6269482719409261983}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: 0.41469327, z: -0, w: 0.9099613}
-  m_LocalPosition: {x: 15.591001, y: 54.32, z: 94.235}
-  m_LocalScale: {x: 1429.8993, y: 825.684, z: 421.78677}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 49, z: 0}
 --- !u!1001 &7054800456467896369
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -22566,7 +23073,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 1788217886}
+    m_TransformParent: {fileID: 1466350404}
     m_Modifications:
     - target: {fileID: 1638244422721217067, guid: 8547587fcb7ed0348b5a62f1329a9b6f, type: 3}
       propertyPath: m_LocalScale.y
@@ -22616,6 +23123,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: wood_Cylinder
       objectReference: {fileID: 0}
+    - target: {fileID: 2159447657311926417, guid: 8547587fcb7ed0348b5a62f1329a9b6f, type: 3}
+      propertyPath: m_TagString
+      value: Trigger_Dark
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -22628,13 +23139,7 @@ SceneRoots:
   - {fileID: 705507995}
   - {fileID: 158300540}
   - {fileID: 500445351}
-  - {fileID: 1101312198}
-  - {fileID: 1368109078}
-  - {fileID: 1636602792}
-  - {fileID: 1060843744}
-  - {fileID: 572210228}
-  - {fileID: 2086176401}
-  - {fileID: 6650266323020846885}
+  - {fileID: 928721858}
   - {fileID: 1788217886}
   - {fileID: 1055113583}
   - {fileID: 1858760157}
