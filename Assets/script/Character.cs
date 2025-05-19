@@ -62,6 +62,7 @@ public class PlayerMovement : MonoBehaviour
     public AudioClip runSound;
     public AudioClip slowRunSound;
     public AudioClip jumpSound;
+    public AudioClip victoryClip;
     private AudioSource audioSource;
     private float footstepTimer = 0f;
     public float footstepInterval = 0.4f;
@@ -328,6 +329,12 @@ public class PlayerMovement : MonoBehaviour
         if (move != null)
         {
             move.isVictory = true;
+        }
+
+        // Victory 사운드 재생
+        if (victoryClip != null && audioSource != null)
+        {
+            audioSource.PlayOneShot(victoryClip);
         }
 
         Debug.Log("Victory!");
