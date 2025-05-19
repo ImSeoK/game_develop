@@ -10,6 +10,7 @@ TagManager:
   - Floor_Slow
   - Floor_Fast
   - Trigger_Dark
+  - CutScene
   layers:
   - Default
   - TransparentFX

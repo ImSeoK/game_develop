@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Playables;
 
 public class UIManager : MonoBehaviour
 {
@@ -14,6 +15,11 @@ public class UIManager : MonoBehaviour
     private bool isSettingsOpen = false;
     private bool isInMainMenu = false; // settings가 어디서 열렸는지 추적
     private bool hasStarted = false;
+
+    [Header("Cutscene")]
+    public GameObject cutsceneCamera;
+    public PlayableDirector cutSceneDirector;
+    public GameObject cutsceneCharacter;
 
     void Awake()
     {
@@ -40,19 +46,38 @@ public class UIManager : MonoBehaviour
 
         mainMenuUI.SetActive(false);
         mainMenuCamera.SetActive(false);
-        inGameCamera.SetActive(true);
-        player.SetActive(true);
 
-        // getting up 애니메이션 실행 (여기로 이동)
-        Animator animator = player.GetComponent<Animator>();
-        if (animator != null)
-        {
-            animator.SetTrigger("gettingUpTrigger");
-            animator.SetBool("hasMoved", false); // 방향키 누르기 전까지 idle로 안 넘어가게
-        }
+        // 컷씬 카메라 켜고, 나머지 꺼두기
+        cutsceneCamera.SetActive(true);
+        inGameCamera.SetActive(false);
+        player.SetActive(false);
+
+        // 컷씬 재생
+        cutSceneDirector.stopped += OnCutsceneEnded;
+        cutSceneDirector.Play();
 
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
+
+        Debug.Log("컷씬 재생 시작");
+    }
+
+    private void OnCutsceneEnded(PlayableDirector director)
+    {
+        cutsceneCamera.SetActive(false);
+        cutsceneCharacter.SetActive(false);
+
+        inGameCamera.SetActive(true);
+        player.SetActive(true);
+
+        // gettingUp은 Entry → gettingUp으로 애니메이터에서 바로 시작되므로 트리거 제거 가능
+        Animator animator = player.GetComponent<Animator>();
+        if (animator != null)
+        {
+            animator.SetBool("hasMoved", false); // idle 전이 조건으로 사용
+        }
+
+        cutSceneDirector.stopped -= OnCutsceneEnded;
 
         Debug.Log("게임 시작 상태 전환 완료");
     }
